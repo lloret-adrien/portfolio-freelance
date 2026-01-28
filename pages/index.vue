@@ -200,7 +200,7 @@ const methodSteps = computed(() => [
           </h2>
         </div>
 
-        <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProjectCard v-for="project in PROJECTS" :key="project.id" :project="project" />
 
           <div class="bg-[#FF6D4D]/5 rounded-[2.5rem] p-10 flex flex-col items-center justify-center text-center group border-2 border-dashed border-[#FF6D4D]/30 shadow-sm hover:shadow-xl hover:border-[#FF6D4D] hover:bg-[#FF6D4D]/10 transition-all duration-500 relative overflow-hidden h-full min-h-[400px]">
@@ -213,24 +213,6 @@ const methodSteps = computed(() => [
               {{ t('home.projects.buildTogether') }}
             </p>
             <NuxtLink :to="localePath('/contact')" class="px-10 py-4 bg-[#1A1A1A] text-white rounded-full font-black text-lg hover:scale-105 hover:bg-black transition-all shadow-xl">
-              {{ t('home.projects.contactMe') }}
-            </NuxtLink>
-          </div>
-        </div>
-
-        <div class="md:hidden -mx-6 px-6 flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-6 pb-8">
-          <div v-for="project in PROJECTS" :key="project.id" class="min-w-[85vw] snap-center">
-            <ProjectCard :project="project" />
-          </div>
-          <div class="min-w-[85vw] snap-center bg-[#FF6D4D]/5 rounded-[2.5rem] p-10 flex flex-col items-center justify-center text-center border-2 border-dashed border-[#FF6D4D]/30">
-            <div class="w-16 h-16 bg-[#FF6D4D] rounded-full flex items-center justify-center text-white mb-6">
-              <Plus class="w-8 h-8" />
-            </div>
-            <h3 class="text-3xl font-black text-slate-900 mb-4 uppercase tracking-tighter">{{ t('home.projects.yourProject') }}</h3>
-            <p class="text-slate-500 font-medium mb-8">
-              {{ t('home.projects.readyToLaunch') }}
-            </p>
-            <NuxtLink :to="localePath('/contact')" class="w-full py-4 bg-[#1A1A1A] text-white rounded-2xl font-black text-lg text-center">
               {{ t('home.projects.contactMe') }}
             </NuxtLink>
           </div>
