@@ -139,7 +139,7 @@ const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rap
             <!-- Conteneur de l'image -->
             <div class="relative z-10 w-64 h-64 md:w-80 md:h-80 rounded-[3.5rem] md:rounded-[4.5rem] bg-[#FF6D4D] rotate-3 shadow-2xl overflow-hidden group">
               <NuxtImg
-                src="/images/profile.jpg"
+                src="/images/linkedin.png"
                 alt="Adrien Lloret - Développeur Web Fullstack Freelance à Montpellier"
                 width="320"
                 height="320"
