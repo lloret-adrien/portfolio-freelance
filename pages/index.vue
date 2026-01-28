@@ -138,9 +138,12 @@ const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rap
           <div class="relative">
             <!-- Conteneur de l'image -->
             <div class="relative z-10 w-64 h-64 md:w-80 md:h-80 rounded-[3.5rem] md:rounded-[4.5rem] bg-[#FF6D4D] rotate-3 shadow-2xl overflow-hidden group">
-              <img
-                src="https://media.licdn.com/dms/image/v2/D4D03AQGquL4J0TvQXw/profile-displayphoto-crop_800_800/B4DZuOrEsZHwAI-/0/1767625216634?e=1770854400&v=beta&t=VdHrIv2ziC1CswoG61vqd4m-SdRJyMxXn11GOlNUr5k"
-                alt="Adrien Lloret photo de profil"
+              <NuxtImg
+                src="/images/profile.jpg"
+                alt="Adrien Lloret - Développeur Web Fullstack Freelance à Montpellier"
+                width="320"
+                height="320"
+                loading="eager"
                 class="w-full h-full scale-110 object-cover group-hover:scale-125 transition-transform duration-700"
               />
             </div>

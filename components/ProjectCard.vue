@@ -23,9 +23,12 @@ defineProps<{
     </div>
 
     <div class="relative aspect-[16/10] rounded-3xl overflow-hidden mb-6 bg-gray-50 border border-gray-100/50">
-      <img
+      <NuxtImg
         :src="project.imageUrl"
         :alt="project.name"
+        width="600"
+        height="375"
+        loading="lazy"
         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
       />
       <!-- Icon open tab overlay -->

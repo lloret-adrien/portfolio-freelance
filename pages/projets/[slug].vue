@@ -38,7 +38,7 @@ if (!project.value) {
           </div>
         </div>
         <div class="aspect-[21/9] rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl">
-          <img :src="project.imageUrl" :alt="project.name" class="w-full h-full object-cover" />
+          <NuxtImg :src="project.imageUrl" :alt="project.name" width="1200" height="514" class="w-full h-full object-cover" />
         </div>
       </div>
     </section>
