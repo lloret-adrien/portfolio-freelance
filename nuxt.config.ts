@@ -7,8 +7,17 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    '@nuxtjs/sitemap'
   ],
+
+  site: {
+    url: 'https://adrien-lloret.com',
+  },
+
+  sitemap: {
+    autoI18n: true,
+  },
 
   i18n: {
     locales: [
@@ -92,5 +101,28 @@ export default defineNuxtConfig({
 
   typescript: {
     strict: true
-  }
+  },
+
+
+  runtimeConfig: {
+    public: {
+      clarityId: process.env.NUXT_PUBLIC_CLARITY_ID,
+    }
+  },
+
+  nitro: {
+    compressPublicAssets: true,
+    routeRules: {
+      // SEO - French (default)
+      '/': { prerender: true },
+      '/parcours': { prerender: true },
+      '/expertises': { prerender: true },
+      '/contact': { prerender: true },
+      // SEO - English
+      '/en': { prerender: true },
+      '/en/parcours': { prerender: true },
+      '/en/expertises': { prerender: true },
+      '/en/contact': { prerender: true },
+    },
+  },
 })

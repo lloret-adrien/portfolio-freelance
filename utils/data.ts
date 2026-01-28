@@ -93,7 +93,7 @@ export const PROJECTS = [
     type: 'Portfolio Premium',
     shortDescription: 'Mon portfolio personnel, concu pour allier design minimaliste et performances optimales.',
     fullDescription: 'Ce portfolio est la vitrine de mon savoir-faire technique et creatif. Developpe avec React et Tailwind CSS, il met l\'accent sur l\'experience utilisateur et les animations fluides.',
-    techs: ['Nuxt', 'Swiper', 'Tailwind', 'PostHog'],
+    techs: ['Nuxt', 'Tailwind', 'PostHog'],
     impact: 'Identite visuelle forte',
     context: 'Besoin d\'un espace centralise pour presenter mes projets et mon parcours de maniere haut de gamme.',
     role: 'Product Designer & Lead Dev',
