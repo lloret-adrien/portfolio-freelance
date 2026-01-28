@@ -2,6 +2,8 @@
 import { ExternalLink } from 'lucide-vue-next'
 import type { PROJECTS } from '~/utils/data'
 
+const { t } = useI18n()
+
 defineProps<{
   project: typeof PROJECTS[number]
 }>()
@@ -19,7 +21,7 @@ defineProps<{
       class="absolute top-4 right-4 z-20 flex items-center gap-2 px-3 py-1.5 bg-white border border-[#FF6D4D]/20 rounded-full shadow-lg shadow-[#FF6D4D]/5 animate-bounce"
     >
       <div class="w-2.5 h-2.5 bg-[#FF6D4D] rounded-full"></div>
-      <span class="text-[#FF6D4D] text-[10px] font-black uppercase tracking-widest">Vous êtes ici</span>
+      <span class="text-[#FF6D4D] text-[10px] font-black uppercase tracking-widest">{{ t('projects.youAreHere') }}</span>
     </div>
 
     <div class="relative aspect-[16/10] rounded-3xl overflow-hidden mb-6 bg-gray-50 border border-gray-100/50">
@@ -45,7 +47,7 @@ defineProps<{
     </div>
 
     <p class="text-slate-500 text-base font-medium leading-relaxed mb-8 line-clamp-3">
-      {{ project.shortDescription }}
+      {{ t(`projects.data.${project.slug}.shortDescription`) }}
     </p>
 
     <div class="mt-auto flex flex-wrap gap-2.5">

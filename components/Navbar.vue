@@ -1,14 +1,16 @@
 <script setup lang="ts">
 import { Menu, X, ArrowUpRight } from 'lucide-vue-next'
 
+const { t } = useI18n()
+const localePath = useLocalePath()
 const isOpen = ref(false)
 const route = useRoute()
 
-const navLinks = [
-  { name: 'Expertises', path: '/expertises' },
-  { name: 'Parcours', path: '/parcours' },
-  { name: 'Contact', path: '/contact' }
-]
+const navLinks = computed(() => [
+  { name: t('nav.expertises'), path: localePath('/expertises') },
+  { name: t('nav.parcours'), path: localePath('/parcours') },
+  { name: t('nav.contact'), path: localePath('/contact') }
+])
 
 const isActive = (path: string) => route.path === path
 
@@ -22,7 +24,7 @@ watch(() => route.path, () => {
   <div class="fixed top-6 left-0 right-0 z-50 px-6">
     <nav class="max-w-5xl mx-auto glass border border-gray-100/50 rounded-2xl shadow-xl shadow-black/5 px-4 md:px-6 h-16 flex items-center justify-between">
       <NuxtLink
-        to="/"
+        :to="localePath('/')"
         class="bg-[#FF6D4D] text-white px-4 py-1.5 rounded-xl font-black text-lg sm:text-xl tracking-tight shadow-lg shadow-[#FF6D4D]/20 whitespace-nowrap hover:scale-105 transition-transform"
       >
         Adrien Lloret
@@ -75,10 +77,10 @@ watch(() => route.path, () => {
           {{ link.name }}
         </NuxtLink>
         <NuxtLink
-          to="/contact"
+          :to="localePath('/contact')"
           class="bg-[#E2F99E] text-black text-center py-4 rounded-2xl font-black flex items-center justify-center gap-2"
         >
-          Contactez-moi <ArrowUpRight class="w-5 h-5" />
+          {{ t('nav.contactMe') }} <ArrowUpRight class="w-5 h-5" />
         </NuxtLink>
       </div>
     </Transition>

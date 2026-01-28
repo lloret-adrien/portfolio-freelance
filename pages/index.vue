@@ -14,15 +14,18 @@ import {
 } from 'lucide-vue-next'
 import { EXPERTISES, PROJECTS } from '~/utils/data'
 
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 useSeoMeta({
-  title: 'Développeur Web Fullstack Freelance à Montpellier',
-  description: 'Développeur Web Fullstack Freelance à Montpellier, France. Spécialisé en Vue.js, Nuxt et TypeScript. Applications web performantes, e-commerce et SaaS sur mesure. Disponible en remote.',
-  ogTitle: 'Adrien Lloret | Développeur Web Fullstack Freelance à Montpellier',
-  ogDescription: 'Développeur Freelance basé à Montpellier. Je conçois des produits web qui résolvent des problèmes et font grandir votre business. Disponible en remote.',
+  title: () => t('seo.home.title'),
+  description: () => t('seo.home.description'),
+  ogTitle: () => t('seo.home.ogTitle'),
+  ogDescription: () => t('seo.home.ogDescription'),
   ogUrl: 'https://adrien-lloret.com',
   ogImage: 'https://adrien-lloret.com/images/og-image.png',
-  twitterTitle: 'Adrien Lloret | Développeur Web Fullstack Freelance à Montpellier',
-  twitterDescription: 'Développeur Freelance basé à Montpellier. Disponible en remote pour vos projets web.',
+  twitterTitle: () => t('seo.home.ogTitle'),
+  twitterDescription: () => t('seo.home.ogDescription'),
   twitterImage: 'https://adrien-lloret.com/images/og-image.png'
 })
 
@@ -32,7 +35,11 @@ useHead({
   ]
 })
 
-const words = ['Web', 'Fullstack', "+3 ans d'xp"]
+const words = computed(() => [
+  t('home.hero.word1'),
+  t('home.hero.word2'),
+  t('home.hero.word3')
+])
 const wordIndex = ref(0)
 const isBorderActive = ref(false)
 const isTextActive = ref(false)
@@ -62,7 +69,7 @@ const runSequence = async () => {
 
   if (!isMounted) return
 
-  wordIndex.value = (wordIndex.value + 1) % words.length
+  wordIndex.value = (wordIndex.value + 1) % words.value.length
   runSequence()
 }
 
@@ -77,9 +84,21 @@ onUnmounted(() => {
 
 const { showScrollTop, scrollToTop } = useScrollTop()
 
-const currentWord = computed(() => words[wordIndex.value])
+const currentWord = computed(() => words.value[wordIndex.value])
 
-const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rapidité d'éxécution"]
+const softSkills = computed(() => [
+  t('home.skills.soft1'),
+  t('home.skills.soft2'),
+  t('home.skills.soft3'),
+  t('home.skills.soft4')
+])
+
+const methodSteps = computed(() => [
+  { step: t('home.method.step1.step'), title: t('home.method.step1.title'), desc: t('home.method.step1.desc'), color: 'bg-[#D1E5FF]' },
+  { step: t('home.method.step2.step'), title: t('home.method.step2.title'), desc: t('home.method.step2.desc'), color: 'bg-[#E2F99E]' },
+  { step: t('home.method.step3.step'), title: t('home.method.step3.title'), desc: t('home.method.step3.desc'), color: 'bg-[#D8D0F5]' },
+  { step: t('home.method.step4.step'), title: t('home.method.step4.title'), desc: t('home.method.step4.desc'), color: 'bg-[#F5D8D0]' }
+])
 </script>
 
 <template>
@@ -91,7 +110,7 @@ const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rap
         'md:hidden fixed bottom-10 right-6 z-[70] p-4 bg-[#FF6D4D] text-white rounded-full shadow-2xl transition-all duration-500 transform',
         showScrollTop ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-50 pointer-events-none'
       ]"
-      aria-label="Retour en haut"
+      :aria-label="t('common.backToTop')"
     >
       <ChevronUp class="w-6 h-6 stroke-[3px]" />
     </button>
@@ -101,7 +120,7 @@ const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rap
       <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div class="text-left order-2 lg:order-1 relative z-20">
           <h1 class="text-5xl md:text-6xl lg:text-[80px] font-black text-slate-900 mb-8 tracking-tighter leading-[0.9] uppercase animate-reveal-up [animation-delay:0.2s]">
-            Développeur <br />
+            {{ t('home.hero.title') }} <br />
             <span :class="['scribble-highlight text-[#FF6D4D]', isBorderActive ? 'scribble-active' : '']">
               <span class="text-reveal-container">
                 <span :class="['text-reveal-item inline-block', isTextActive ? 'text-reveal-active' : '']">
@@ -112,24 +131,24 @@ const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rap
           </h1>
 
           <p class="text-lg lg:text-xl text-slate-500 max-w-xl mb-12 font-medium leading-relaxed animate-reveal-up [animation-delay:0.4s]">
-            Je ne fais pas que coder. Je conçois des produits qui résolvent des problèmes et font grandir votre business avec une <span class="text-black font-bold">touche de peps.</span>
+            {{ t('home.hero.description') }} <span class="text-black font-bold">{{ t('home.hero.descriptionBold') }}</span>
           </p>
 
           <div class="flex flex-wrap gap-6 animate-reveal-up [animation-delay:0.6s] justify-center sm:justify-start">
             <NuxtLink
-              to="/contact"
+              :to="localePath('/contact')"
               class="group relative inline-flex items-center gap-6 px-10 py-5 bg-[#1A1A1A] text-white rounded-2xl font-black text-2xl hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-[#FF6D4D]/20 hover:shadow-[#FF6D4D]/50"
             >
-              Me contacter
+              {{ t('home.hero.cta') }}
               <div class="bg-[#FF6D4D] p-2.5 rounded-full group-hover:rotate-45 transition-transform duration-500">
                 <ArrowUpRight class="w-6 h-6" />
               </div>
               <div class="absolute -top-3 -right-3 bg-[#E2F99E] text-black text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-tighter shadow-lg -rotate-6 group-hover:rotate-0 transition-transform">
-                Un Projet ?
+                {{ t('home.hero.ctaBadge') }}
               </div>
             </NuxtLink>
             <a href="#projets" class="px-10 py-5 bg-white border-2 border-slate-100 text-slate-900 rounded-2xl font-black text-lg hover:border-[#FF6D4D] transition-all flex items-center gap-3">
-              Voir mes projets
+              {{ t('home.hero.viewProjects') }}
             </a>
           </div>
         </div>
@@ -168,7 +187,7 @@ const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rap
 
             <!-- Badge de bienvenue -->
             <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white px-8 py-3.5 rounded-full shadow-2xl border border-gray-100 text-[12px] font-black tracking-[0.2em] uppercase z-30 whitespace-nowrap">
-              Salut ! C'est <span class="text-[#FF6D4D]">Adrien</span>
+              {{ t('home.hero.welcome') }} <span class="text-[#FF6D4D]">{{ t('home.hero.name') }}</span>
             </div>
           </div>
         </div>
@@ -192,7 +211,7 @@ const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rap
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-20">
           <h2 class="text-5xl lg:text-7xl font-black text-slate-900 tracking-tighter uppercase leading-none">
-            Projets <br /><span class="text-[#FF6D4D]">Réalisés</span>
+            {{ t('home.projects.title') }} <br /><span class="text-[#FF6D4D]">{{ t('home.projects.titleHighlight') }}</span>
           </h2>
         </div>
 
@@ -204,12 +223,12 @@ const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rap
             <div class="w-20 h-20 bg-[#FF6D4D] rounded-full flex items-center justify-center text-white mb-8 group-hover:rotate-90 group-hover:scale-110 transition-all duration-500 shadow-lg shadow-[#FF6D4D]/20">
               <Plus class="w-10 h-10" />
             </div>
-            <h3 class="text-3xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Votre projet ?</h3>
+            <h3 class="text-3xl font-black text-slate-900 mb-4 uppercase tracking-tighter">{{ t('home.projects.yourProject') }}</h3>
             <p class="text-slate-500 font-medium mb-10 max-w-[200px]">
-              Construisons quelque chose d'incroyable ensemble.
+              {{ t('home.projects.buildTogether') }}
             </p>
-            <NuxtLink to="/contact" class="px-10 py-4 bg-[#1A1A1A] text-white rounded-full font-black text-lg hover:scale-105 hover:bg-black transition-all shadow-xl">
-              Me contacter
+            <NuxtLink :to="localePath('/contact')" class="px-10 py-4 bg-[#1A1A1A] text-white rounded-full font-black text-lg hover:scale-105 hover:bg-black transition-all shadow-xl">
+              {{ t('home.projects.contactMe') }}
             </NuxtLink>
           </div>
         </div>
@@ -222,12 +241,12 @@ const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rap
             <div class="w-16 h-16 bg-[#FF6D4D] rounded-full flex items-center justify-center text-white mb-6">
               <Plus class="w-8 h-8" />
             </div>
-            <h3 class="text-3xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Votre projet ?</h3>
+            <h3 class="text-3xl font-black text-slate-900 mb-4 uppercase tracking-tighter">{{ t('home.projects.yourProject') }}</h3>
             <p class="text-slate-500 font-medium mb-8">
-              Prêt à lancer votre vision ?
+              {{ t('home.projects.readyToLaunch') }}
             </p>
-            <NuxtLink to="/contact" class="w-full py-4 bg-[#1A1A1A] text-white rounded-2xl font-black text-lg text-center">
-              Me contacter
+            <NuxtLink :to="localePath('/contact')" class="w-full py-4 bg-[#1A1A1A] text-white rounded-2xl font-black text-lg text-center">
+              {{ t('home.projects.contactMe') }}
             </NuxtLink>
           </div>
         </div>
@@ -238,16 +257,11 @@ const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rap
     <section class="px-6 py-32 bg-white">
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-24">
-          <h2 class="text-5xl lg:text-7xl font-black text-slate-900 tracking-tighter uppercase">Ma <span class="text-[#FF6D4D]">méthode</span></h2>
+          <h2 class="text-5xl lg:text-7xl font-black text-slate-900 tracking-tighter uppercase">{{ t('home.method.title') }} <span class="text-[#FF6D4D]">{{ t('home.method.titleHighlight') }}</span></h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-          <div v-for="(s, i) in [
-            { step: '01', title: 'Comprendre', desc: 'Analyse de vos objectifs et des besoins utilisateurs.', color: 'bg-[#D1E5FF]' },
-            { step: '02', title: 'Planifier', desc: 'Définition de la stratégie adaptée', color: 'bg-[#E2F99E]' },
-            { step: '03', title: 'Construire', desc: 'Développement collaboratif avec feedback en temps réel.', color: 'bg-[#D8D0F5]' },
-            { step: '04', title: 'Mesurer', desc: 'Analyse des résultats et optimisation continue.', color: 'bg-[#F5D8D0]' }
-          ]" :key="i" class="flex gap-8 group">
+          <div v-for="(s, idx) in methodSteps" :key="idx" class="flex gap-8 group">
             <div :class="[s.color, 'w-16 h-16 rounded-2xl flex items-center justify-center font-black text-xl shrink-0 group-hover:rotate-6 transition-transform shadow-lg']">
               {{ s.step }}
             </div>
@@ -264,10 +278,10 @@ const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rap
     <section class="px-6 py-32 bg-[#FAFAFA]">
       <div class="max-w-7xl mx-auto">
         <div class="mb-16">
-          <span class="text-[#FF6D4D] text-xs font-black uppercase tracking-[0.2em] mb-4 block">COMPÉTENCES</span>
+          <span class="text-[#FF6D4D] text-xs font-black uppercase tracking-[0.2em] mb-4 block">{{ t('home.skills.label') }}</span>
           <div class="flex items-center gap-6">
             <h2 class="text-5xl lg:text-7xl font-black text-slate-900 tracking-tighter leading-none">
-              Ce que j'apporte
+              {{ t('home.skills.title') }}
             </h2>
           </div>
         </div>
@@ -276,7 +290,7 @@ const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rap
           <div class="lg:col-span-7">
             <div class="flex items-center gap-3 mb-10">
               <div class="w-2 h-2 rounded-full bg-[#FF6D4D]"></div>
-              <h3 class="text-2xl font-black text-slate-900 tracking-tight">Compétences techniques</h3>
+              <h3 class="text-2xl font-black text-slate-900 tracking-tight">{{ t('home.skills.technical') }}</h3>
             </div>
 
             <div class="flex flex-wrap gap-4">
@@ -311,7 +325,7 @@ const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rap
           <div class="lg:col-span-5">
             <div class="flex items-center gap-3 mb-6 sm:mb-10">
               <div class="w-2 h-2 rounded-full bg-[#FF6D4D]"></div>
-              <h3 class="text-2xl font-black text-slate-900 tracking-tight">Savoir-être</h3>
+              <h3 class="text-2xl font-black text-slate-900 tracking-tight">{{ t('home.skills.softSkills') }}</h3>
             </div>
 
             <div class="flex flex-wrap gap-2 sm:gap-4">
@@ -328,10 +342,10 @@ const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rap
 
         <div class="flex justify-center sm:justify-start">
           <NuxtLink
-            to="/expertises"
+            :to="localePath('/expertises')"
             class="inline-flex items-center gap-4 px-10 py-6 bg-white border-2 border-slate-100 text-slate-900 rounded-[2rem] font-black text-xl hover:border-[#FF6D4D] hover:text-[#FF6D4D] transition-all group shadow-sm hover:shadow-xl"
           >
-            Voir mes expertises
+            {{ t('home.skills.viewExpertises') }}
             <div class="bg-[#FF6D4D]/10 p-2 rounded-full group-hover:bg-[#FF6D4D] group-hover:text-white transition-colors">
               <ArrowRight class="w-5 h-5" />
             </div>
@@ -345,12 +359,12 @@ const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rap
       <div class="max-w-7xl mx-auto bg-[#D1E5FF] p-4 sm:p-8 md:p-12 rounded-[4rem] relative overflow-hidden shadow-2xl">
         <div class="bg-white p-6 sm:p-10 md:p-12 lg:p-20 rounded-[3rem] shadow-2xl relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
-            <span class="bg-[#E2F99E] text-green-900 px-4 py-1 rounded-full text-xs font-black uppercase mb-6 inline-block tracking-widest">UN PROJET EN TÊTE ?</span>
+            <span class="bg-[#E2F99E] text-green-900 px-4 py-1 rounded-full text-xs font-black uppercase mb-6 inline-block tracking-widest">{{ t('home.cta.badge') }}</span>
             <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 mb-8 tracking-tighter leading-[1.1] uppercase">
-              On <span class="scribble-highlight">discute?</span> <span class="text-yellow-400 font-normal">+</span>
+              {{ t('home.cta.title') }} <span class="scribble-highlight">{{ t('home.cta.titleHighlight') }}</span> <span class="text-yellow-400 font-normal">+</span>
             </h2>
             <p class="text-lg sm:text-xl text-slate-500 font-medium mb-12 leading-relaxed">
-              Un projet en tête ou une vision à partager ? Écrivez-moi ou retrouvez-moi sur les réseaux.
+              {{ t('home.cta.description') }}
             </p>
 
             <div class="flex items-center gap-4">

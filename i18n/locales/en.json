@@ -1,0 +1,200 @@
+{
+  "seo": {
+    "home": {
+      "title": "Fullstack Web Developer Freelance in Montpellier",
+      "description": "Fullstack Web Developer Freelance based in Montpellier, France. Specialized in Vue.js, Nuxt and TypeScript. High-performance web apps, e-commerce and custom SaaS. Available remotely.",
+      "ogTitle": "Adrien Lloret | Fullstack Web Developer Freelance in Montpellier",
+      "ogDescription": "Freelance Developer based in Montpellier. I build web products that solve problems and grow your business. Available remotely."
+    },
+    "expertises": {
+      "title": "Expertise",
+      "description": "Discover my expertise: fullstack web development, e-commerce, analytics and AI integration. A blend of modern tools and strategic product vision.",
+      "ogTitle": "Expertise | Adrien Lloret",
+      "ogDescription": "Fullstack web development, e-commerce, analytics and AI. Custom solutions to boost your projects."
+    },
+    "parcours": {
+      "title": "Journey",
+      "description": "Discover my journey: 3+ years in fullstack web development, Master's in Tech Lead with cybersecurity focus, and various startup and corporate experiences.",
+      "ogTitle": "Journey | Adrien Lloret",
+      "ogDescription": "My educational and professional journey: web development, Master's Tech Lead, startup experiences."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact me to discuss your web project. Freelance Fullstack Developer available for e-commerce, SaaS and custom application projects.",
+      "ogTitle": "Contact | Adrien Lloret",
+      "ogDescription": "Got a project in mind? Contact me to discuss it. Freelance Fullstack Web Developer."
+    }
+  },
+  "nav": {
+    "expertises": "Expertise",
+    "parcours": "Journey",
+    "contact": "Contact",
+    "contactMe": "Contact me"
+  },
+  "home": {
+    "hero": {
+      "title": "Developer",
+      "word1": "Web",
+      "word2": "Fullstack",
+      "word3": "3+ yrs exp",
+      "description": "I don't just code. I build products that solve problems and grow your business with a",
+      "descriptionBold": "touch of flair.",
+      "cta": "Contact me",
+      "ctaBadge": "Got a Project?",
+      "viewProjects": "View my projects",
+      "welcome": "Hey! It's",
+      "name": "Adrien"
+    },
+    "projects": {
+      "title": "Completed",
+      "titleHighlight": "Projects",
+      "yourProject": "Your project?",
+      "buildTogether": "Let's build something amazing together.",
+      "readyToLaunch": "Ready to launch your vision?",
+      "contactMe": "Contact me"
+    },
+    "method": {
+      "title": "My",
+      "titleHighlight": "method",
+      "step1": { "step": "01", "title": "Understand", "desc": "Analysis of your goals and user needs." },
+      "step2": { "step": "02", "title": "Plan", "desc": "Definition of the right strategy" },
+      "step3": { "step": "03", "title": "Build", "desc": "Collaborative development with real-time feedback." },
+      "step4": { "step": "04", "title": "Measure", "desc": "Results analysis and continuous optimization." }
+    },
+    "skills": {
+      "label": "SKILLS",
+      "title": "What I bring",
+      "technical": "Technical skills",
+      "softSkills": "Soft skills",
+      "soft1": "Creative mind",
+      "soft2": "Eye for detail",
+      "soft3": "Adaptability",
+      "soft4": "Fast execution",
+      "viewExpertises": "View my expertise"
+    },
+    "cta": {
+      "badge": "GOT A PROJECT?",
+      "title": "Let's",
+      "titleHighlight": "talk?",
+      "description": "Got a project or a vision to share? Drop me a line or find me on social media."
+    }
+  },
+  "expertises": {
+    "badge": "Technical Expertise",
+    "title": "My",
+    "titleHighlight": "Skillset.",
+    "description": "A blend of cutting-edge tools and strategic product vision to propel your ideas.",
+    "scroll": "Scroll",
+    "ctaTitle": "Got a",
+    "ctaTitleHighlight": "project?",
+    "ctaButton": "Let's talk",
+    "data": {
+      "1": {
+        "title": "Fullstack Web Development",
+        "description": "Design and development of solid, maintainable and scalable web applications.",
+        "detail1": "Modern architectures (SPA, SSR, Headless)",
+        "detail2": "Demanding frontend (UX, performance, a11y)",
+        "detail3": "Robust APIs & mastered data"
+      },
+      "2": {
+        "title": "E-commerce",
+        "description": "Setting up simple, performant and well-designed e-commerce stores to launch a brand quickly, without unnecessary complexity or extra cost.",
+        "detail1": "Ready to sell in weeks",
+        "detail2": "Clear and reassuring UX",
+        "detail3": "Stripe payments & billing",
+        "detail4": "SEO optimization",
+        "detail5": "Performance tracking & key data"
+      },
+      "3": {
+        "title": "Analytics",
+        "description": "Setting up tracking tools to understand how users actually navigate your site and identify improvement levers.",
+        "detail1": "Traffic and source tracking",
+        "detail2": "Custom events",
+        "detail3": "Bounce rate",
+        "detail4": "Friction points"
+      },
+      "4": {
+        "title": "AI & Productivity",
+        "description": "Leveraging AI to design, prototype and integrate it effectively into your projects.",
+        "detail1": "Rapid prototyping",
+        "detail2": "Image analysis",
+        "detail3": "Workflow integration",
+        "detail4": "Optimized prompts"
+      },
+      "cta": {
+        "title": "Let's chat?",
+        "description": "Got a project or a vision to share? Drop me a line or find me on social media."
+      }
+    }
+  },
+  "parcours": {
+    "badge": "Education & Experience",
+    "title": "My",
+    "titleHighlight": "Journey",
+    "description": "An overview of my educational and professional journey over the past five years.",
+    "downloadCV": "Download my CV",
+    "cvVersion": "Version 4.2",
+    "workExperience": "Work Experience",
+    "education": "Education"
+  },
+  "contact": {
+    "badge": "Let's talk about your project",
+    "title": "Let's stay in",
+    "titleHighlight": "touch",
+    "description": "Got a project or a vision to share? Drop me a line or find me on social media.",
+    "form": {
+      "emailLabel": "Professional email",
+      "emailPlaceholder": "your{'@'}email.com",
+      "messageLabel": "Your message",
+      "messagePlaceholder": "Describe your needs in a few words...",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "successTitle": "Message sent!",
+      "successDescription": "I'll reply within 24h.",
+      "hint": "Reply guaranteed within 24h"
+    }
+  },
+  "footer": {
+    "tagline": "Let's build your project",
+    "taglineHighlight": "together",
+    "description": "I design, code and optimize your project with precision and passion, for real impact.",
+    "navigation": "Navigation",
+    "home": "Home",
+    "contactMe": "Contact me",
+    "projectBadge": "A project?",
+    "startProject": "Start a project",
+    "copyright": "Adrien Lloret. Made with passion and lots of coffee.",
+    "location": "Based in",
+    "france": "France",
+    "city": "Montpellier",
+    "remoteAvailable": "available remotely"
+  },
+  "projects": {
+    "youAreHere": "You are here",
+    "data": {
+      "deuxbrins": {
+        "type": "E-commerce",
+        "shortDescription": "E-commerce site for a custom jewelry boutique with DNA personalization"
+      },
+      "bestframe-ai": {
+        "type": "SaaS",
+        "shortDescription": "AI SaaS that detects and extracts the best moments from a video automatically."
+      },
+      "portfolio": {
+        "type": "Premium Portfolio",
+        "shortDescription": "My personal portfolio, designed to blend minimalist design with optimal performance."
+      },
+      "interactive-3d-portfolio": {
+        "type": "Experimental Portfolio",
+        "shortDescription": "Immersive 3D portfolio showcasing experimental design and motion."
+      },
+      "slym": {
+        "type": "Community Platform",
+        "shortDescription": "Platform for creating hubs, managing groups and selling digital products."
+      }
+    }
+  },
+  "common": {
+    "backToTop": "Back to top"
+  }
+}

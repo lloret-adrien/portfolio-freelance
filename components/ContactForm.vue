@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ArrowUpRight, Star, CheckCircle } from 'lucide-vue-next'
 
+const { t } = useI18n()
+
 const isSubmitted = ref(false)
 const isSubmitting = ref(false)
 
@@ -32,8 +34,8 @@ const handleSubmit = async (e: Event) => {
       <div class="w-16 h-16 bg-[#E2F99E] rounded-full flex items-center justify-center mx-auto mb-6">
         <CheckCircle class="w-8 h-8 text-green-700" />
       </div>
-      <h3 class="text-2xl font-black text-slate-900 mb-3">Message envoyé !</h3>
-      <p class="text-slate-500 font-medium">Je vous réponds sous 24h.</p>
+      <h3 class="text-2xl font-black text-slate-900 mb-3">{{ t('contact.form.successTitle') }}</h3>
+      <p class="text-slate-500 font-medium">{{ t('contact.form.successDescription') }}</p>
     </div>
 
     <!-- Form -->
@@ -54,24 +56,24 @@ const handleSubmit = async (e: Event) => {
       </p>
 
       <div class="space-y-2">
-        <label for="email" class="text-[10px] font-black text-slate-400 uppercase ml-4 tracking-widest">Email professionnel</label>
+        <label for="email" class="text-[10px] font-black text-slate-400 uppercase ml-4 tracking-widest">{{ t('contact.form.emailLabel') }}</label>
         <input
           id="email"
           name="email"
           type="email"
           required
-          placeholder="votre@email.com"
+          :placeholder="t('contact.form.emailPlaceholder')"
           class="w-full px-5 sm:px-8 py-3.5 sm:py-4.5 rounded-xl sm:rounded-[1.5rem] bg-[#FAFAFA] border border-gray-100 focus:outline-none focus:ring-4 focus:ring-[#FF6D4D]/20 font-black text-base sm:text-lg transition-all"
         />
       </div>
 
       <div class="space-y-2">
-        <label for="message" class="text-[10px] font-black text-slate-400 uppercase ml-4 tracking-widest">Votre message</label>
+        <label for="message" class="text-[10px] font-black text-slate-400 uppercase ml-4 tracking-widest">{{ t('contact.form.messageLabel') }}</label>
         <textarea
           id="message"
           name="message"
           required
-          placeholder="Décrivez votre besoin en quelques mots..."
+          :placeholder="t('contact.form.messagePlaceholder')"
           rows="5"
           class="w-full px-5 sm:px-8 py-3.5 sm:py-4.5 rounded-xl sm:rounded-[1.5rem] bg-[#FAFAFA] border border-gray-100 focus:outline-none focus:ring-4 focus:ring-[#FF6D4D]/20 font-black text-base sm:text-lg transition-all resize-none"
         ></textarea>
@@ -85,8 +87,8 @@ const handleSubmit = async (e: Event) => {
           isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-black hover:scale-[1.01]'
         ]"
       >
-        <span v-if="isSubmitting">Envoi en cours...</span>
-        <span v-else>Envoyer le message</span>
+        <span v-if="isSubmitting">{{ t('contact.form.sending') }}</span>
+        <span v-else>{{ t('contact.form.submit') }}</span>
         <div v-if="!isSubmitting" class="bg-white text-black rounded-full p-1.5 group-hover:translate-x-1 transition-transform">
           <ArrowUpRight class="w-4 h-4 sm:w-5 sm:h-5" />
         </div>
@@ -96,7 +98,7 @@ const handleSubmit = async (e: Event) => {
     <!-- Hint -->
     <div v-if="!isSubmitted" class="mt-6 flex items-center justify-center gap-2 text-slate-400 font-bold text-[10px] uppercase tracking-widest">
       <Star class="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
-      Réponse garantie sous 24h
+      {{ t('contact.form.hint') }}
     </div>
   </div>
 </template>

@@ -2,6 +2,9 @@
 import { GraduationCap, Briefcase, ArrowUpRight } from 'lucide-vue-next'
 import { EXPERIENCE } from '~/utils/data'
 
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 // Chronologie : du plus ancien au plus récent
 const chronologicExperience = [...EXPERIENCE].reverse()
 
@@ -178,7 +181,7 @@ const setItemRef = (el: any, index: number) => {
                     isActive(index) ? 'border-slate-200 text-slate-400' : 'border-slate-50 text-slate-200'
                   ]"
                 >
-                  {{ item.type === 'work' ? 'Expérience Pro' : 'Formation' }}
+                  {{ item.type === 'work' ? t('parcours.workExperience') : t('parcours.education') }}
                 </div>
               </div>
             </div>
@@ -194,15 +197,15 @@ const setItemRef = (el: any, index: number) => {
             ]"
           >
             <NuxtLink
-              to="/contact"
+              :to="localePath('/contact')"
               class="group relative inline-flex items-center gap-6 px-12 py-7 bg-[#1A1A1A] text-white rounded-[2.5rem] font-black text-2xl hover:scale-105 active:scale-95 transition-all shadow-2xl hover:shadow-[#FF6D4D]/20"
             >
-              Me contacter
+              {{ t('footer.contactMe') }}
               <div class="bg-[#FF6D4D] p-2.5 rounded-full group-hover:rotate-45 transition-transform duration-500">
                 <ArrowUpRight class="w-6 h-6" />
               </div>
               <div class="absolute -top-3 -right-3 bg-[#E2F99E] text-black text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-tighter shadow-lg -rotate-6 group-hover:rotate-0 transition-transform">
-                Un Projet ?
+                {{ t('home.hero.ctaBadge') }}
               </div>
             </NuxtLink>
           </div>

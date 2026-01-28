@@ -1,0 +1,200 @@
+{
+  "seo": {
+    "home": {
+      "title": "Développeur Web Fullstack Freelance à Montpellier",
+      "description": "Développeur Web Fullstack Freelance à Montpellier, France. Spécialisé en Vue.js, Nuxt et TypeScript. Applications web performantes, e-commerce et SaaS sur mesure. Disponible en remote.",
+      "ogTitle": "Adrien Lloret | Développeur Web Fullstack Freelance à Montpellier",
+      "ogDescription": "Développeur Freelance basé à Montpellier. Je conçois des produits web qui résolvent des problèmes et font grandir votre business. Disponible en remote."
+    },
+    "expertises": {
+      "title": "Expertises",
+      "description": "Découvrez mes expertises : développement web fullstack, e-commerce, analytics et intégration IA. Une combinaison d'outils modernes et d'une vision produit stratégique.",
+      "ogTitle": "Expertises | Adrien Lloret",
+      "ogDescription": "Développement web fullstack, e-commerce, analytics et IA. Des solutions sur mesure pour propulser vos projets."
+    },
+    "parcours": {
+      "title": "Parcours",
+      "description": "Découvrez mon parcours : +3 ans d'expérience en développement web fullstack, Master Tech Lead spécialisé cybersécurité, et diverses expériences en startup et entreprise.",
+      "ogTitle": "Parcours | Adrien Lloret",
+      "ogDescription": "Mon parcours éducatif et professionnel : développement web, Master Tech Lead, expériences en startup."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contactez-moi pour discuter de votre projet web. Développeur Fullstack Freelance disponible pour des missions e-commerce, SaaS et applications sur mesure.",
+      "ogTitle": "Contact | Adrien Lloret",
+      "ogDescription": "Un projet en tête ? Contactez-moi pour en discuter. Développeur Web Fullstack Freelance."
+    }
+  },
+  "nav": {
+    "expertises": "Expertises",
+    "parcours": "Parcours",
+    "contact": "Contact",
+    "contactMe": "Contactez-moi"
+  },
+  "home": {
+    "hero": {
+      "title": "Développeur",
+      "word1": "Web",
+      "word2": "Fullstack",
+      "word3": "+3 ans d'xp",
+      "description": "Je ne fais pas que coder. Je conçois des produits qui résolvent des problèmes et font grandir votre business avec une",
+      "descriptionBold": "touche de peps.",
+      "cta": "Me contacter",
+      "ctaBadge": "Un Projet ?",
+      "viewProjects": "Voir mes projets",
+      "welcome": "Salut ! C'est",
+      "name": "Adrien"
+    },
+    "projects": {
+      "title": "Projets",
+      "titleHighlight": "Réalisés",
+      "yourProject": "Votre projet ?",
+      "buildTogether": "Construisons quelque chose d'incroyable ensemble.",
+      "readyToLaunch": "Prêt à lancer votre vision ?",
+      "contactMe": "Me contacter"
+    },
+    "method": {
+      "title": "Ma",
+      "titleHighlight": "méthode",
+      "step1": { "step": "01", "title": "Comprendre", "desc": "Analyse de vos objectifs et des besoins utilisateurs." },
+      "step2": { "step": "02", "title": "Planifier", "desc": "Définition de la stratégie adaptée" },
+      "step3": { "step": "03", "title": "Construire", "desc": "Développement collaboratif avec feedback en temps réel." },
+      "step4": { "step": "04", "title": "Mesurer", "desc": "Analyse des résultats et optimisation continue." }
+    },
+    "skills": {
+      "label": "COMPÉTENCES",
+      "title": "Ce que j'apporte",
+      "technical": "Compétences techniques",
+      "softSkills": "Savoir-être",
+      "soft1": "Esprit créatif",
+      "soft2": "Souci du détail",
+      "soft3": "Adaptabilité",
+      "soft4": "Rapidité d'éxécution",
+      "viewExpertises": "Voir mes expertises"
+    },
+    "cta": {
+      "badge": "UN PROJET EN TÊTE ?",
+      "title": "On",
+      "titleHighlight": "discute?",
+      "description": "Un projet en tête ou une vision à partager ? Écrivez-moi ou retrouvez-moi sur les réseaux."
+    }
+  },
+  "expertises": {
+    "badge": "Expertise Technique",
+    "title": "Mon",
+    "titleHighlight": "Savoir-faire.",
+    "description": "Une combinaison d'outils de pointe et d'une vision produit stratégique pour propulser vos idées.",
+    "scroll": "Scrollez",
+    "ctaTitle": "Un",
+    "ctaTitleHighlight": "projet?",
+    "ctaButton": "Parlons-en",
+    "data": {
+      "1": {
+        "title": "Developpement Web Fullstack",
+        "description": "Conception et developpement d'applications web solides, maintenables et pretes a scaler.",
+        "detail1": "Architectures modernes (SPA, SSR, Headless)",
+        "detail2": "Frontend exigeant (UX, performances, accessibilite)",
+        "detail3": "APIs robustes & donnees maitrisees"
+      },
+      "2": {
+        "title": "E-commerce",
+        "description": "Mise en place de boutiques e-commerce simples, performantes et bien pensees pour lancer une marque rapidement, sans complexite inutile ni surcout.",
+        "detail1": "Pret a vendre en quelques semaines",
+        "detail2": "Experience claire et rassurante",
+        "detail3": "Paiements & Facturation Stripe",
+        "detail4": "Referencement",
+        "detail5": "Suivi des performances & donnees cles"
+      },
+      "3": {
+        "title": "Analytics",
+        "description": "Mise en place d'outils de suivi pour comprendre comment les utilisateurs naviguent reellement sur votre site et identifier les leviers d'amelioration.",
+        "detail1": "Suivi du trafic et des sources",
+        "detail2": "Evenements personnalises",
+        "detail3": "Taux de rebond",
+        "detail4": "Points de friction"
+      },
+      "4": {
+        "title": "IA & Productivite",
+        "description": "Exploiter l'IA pour concevoir, prototyper et l'integrer efficacement dans vos projets.",
+        "detail1": "Prototypage rapide",
+        "detail2": "Analyse d'images",
+        "detail3": "Integration workflow",
+        "detail4": "Prompts optimises"
+      },
+      "cta": {
+        "title": "On discute?",
+        "description": "Un projet en tete ou une vision a partager ? Ecrivez-moi ou retrouvez-moi sur les reseaux."
+      }
+    }
+  },
+  "parcours": {
+    "badge": "Éducations & Expériences",
+    "title": "Mon",
+    "titleHighlight": "Parcours",
+    "description": "Une vue d'ensemble de mon parcours éducatif et professionnel sur les cinq dernières années.",
+    "downloadCV": "Télécharger mon CV",
+    "cvVersion": "Version 4.2",
+    "workExperience": "Expérience Pro",
+    "education": "Formation"
+  },
+  "contact": {
+    "badge": "Parlons de votre projet",
+    "title": "On reste en",
+    "titleHighlight": "contact",
+    "description": "Un projet en tête ou une vision à partager ? Écrivez-moi ou retrouvez-moi sur les réseaux.",
+    "form": {
+      "emailLabel": "Email professionnel",
+      "emailPlaceholder": "votre{'@'}email.com",
+      "messageLabel": "Votre message",
+      "messagePlaceholder": "Décrivez votre besoin en quelques mots...",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "successTitle": "Message envoyé !",
+      "successDescription": "Je vous réponds sous 24h.",
+      "hint": "Réponse garantie sous 24h"
+    }
+  },
+  "footer": {
+    "tagline": "Construisons votre projet",
+    "taglineHighlight": "ensemble",
+    "description": "Je conçois, code et optimise votre projet avec précision et passion, pour un impact réel.",
+    "navigation": "Navigation",
+    "home": "Accueil",
+    "contactMe": "Me contacter",
+    "projectBadge": "Un projet?",
+    "startProject": "Démarrer un projet",
+    "copyright": "Adrien Lloret. Fait avec passion et beaucoup de café.",
+    "location": "Basé en",
+    "france": "France",
+    "city": "Montpellier",
+    "remoteAvailable": "disponible en remote"
+  },
+  "projects": {
+    "youAreHere": "Vous êtes ici",
+    "data": {
+      "deuxbrins": {
+        "type": "E-commerce",
+        "shortDescription": "Site e-commerce d'une boutique de bijou personnalisees avec de l'ADN"
+      },
+      "bestframe-ai": {
+        "type": "SaaS",
+        "shortDescription": "SaaS IA qui detecte et extrait automatiquement les meilleurs moments d'une video."
+      },
+      "portfolio": {
+        "type": "Portfolio Premium",
+        "shortDescription": "Mon portfolio personnel, concu pour allier design minimaliste et performances optimales."
+      },
+      "interactive-3d-portfolio": {
+        "type": "Portfolio experimental",
+        "shortDescription": "Portfolio 3D immersif mettant en avant le design experimental et le motion."
+      },
+      "slym": {
+        "type": "Plateforme communautaire",
+        "shortDescription": "Plateforme permettant de creer des hubs, gerer des groupes et vendre des produits digitaux."
+      }
+    }
+  },
+  "common": {
+    "backToTop": "Retour en haut"
+  }
+}

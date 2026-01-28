@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import { Download } from 'lucide-vue-next'
 
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Parcours',
-  description: 'Découvrez mon parcours : +3 ans d\'expérience en développement web fullstack, Master Tech Lead spécialisé cybersécurité, et diverses expériences en startup et entreprise.',
-  ogTitle: 'Parcours | Adrien Lloret',
-  ogDescription: 'Mon parcours éducatif et professionnel : développement web, Master Tech Lead, expériences en startup.',
+  title: () => t('seo.parcours.title'),
+  description: () => t('seo.parcours.description'),
+  ogTitle: () => t('seo.parcours.ogTitle'),
+  ogDescription: () => t('seo.parcours.ogDescription'),
   ogUrl: 'https://adrien-lloret.com/parcours',
   ogImage: 'https://adrien-lloret.com/images/og-image.png',
-  twitterTitle: 'Parcours | Adrien Lloret',
-  twitterDescription: 'Mon parcours éducatif et professionnel en développement web.',
+  twitterTitle: () => t('seo.parcours.ogTitle'),
+  twitterDescription: () => t('seo.parcours.ogDescription'),
   twitterImage: 'https://adrien-lloret.com/images/og-image.png'
 })
 
@@ -27,21 +29,21 @@ useHead({
       <header class="mb-32 text-center relative">
 
         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 text-slate-500 font-black text-[10px] uppercase tracking-[0.2em] mb-8 animate-reveal-up">
-          Éducations & Expériences
+          {{ t('parcours.badge') }}
         </div>
 
         <h1 class="text-7xl lg:text-[140px] font-black text-slate-900 mb-8 tracking-tighter leading-none uppercase select-none animate-reveal-up [animation-delay:150ms]">
-          Mon<br /> <span class="text-[#FF6D4D]">Parcours</span>
+          {{ t('parcours.title') }}<br /> <span class="text-[#FF6D4D]">{{ t('parcours.titleHighlight') }}</span>
         </h1>
 
         <p class="text-2xl text-slate-500 max-w-2xl mx-auto font-medium mb-12 animate-reveal-up [animation-delay:300ms]">
-          Une vue d'ensemble de mon parcours éducatif et professionnel sur les cinq dernières années.
+          {{ t('parcours.description') }}
         </p>
 
         <div class="animate-reveal-up [animation-delay:450ms]">
           <button class="group relative inline-flex items-center px-12 py-6 bg-[#1A1A1A] text-white rounded-[2rem] font-black text-2xl hover:scale-105 transition-all shadow-2xl">
-            Télécharger mon CV <Download class="w-6 h-6 ml-3" />
-            <div class="absolute -top-3 -right-3 bg-[#E2F99E] text-black text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter shadow-lg rotate-12">Version 4.2</div>
+            {{ t('parcours.downloadCV') }} <Download class="w-6 h-6 ml-3" />
+            <div class="absolute -top-3 -right-3 bg-[#E2F99E] text-black text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter shadow-lg rotate-12">{{ t('parcours.cvVersion') }}</div>
           </button>
         </div>
       </header>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-const isExpertisePage = computed(() => route.path === '/expertises')
+const isExpertisePage = computed(() => route.path.includes('expertises'))
 </script>
 
 <template>

@@ -11,15 +11,18 @@ import {
 } from 'lucide-vue-next'
 import { EXPERTISES } from '~/utils/data'
 
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 useSeoMeta({
-  title: 'Expertises',
-  description: 'Découvrez mes expertises : développement web fullstack, e-commerce, analytics et intégration IA. Une combinaison d\'outils modernes et d\'une vision produit stratégique.',
-  ogTitle: 'Expertises | Adrien Lloret',
-  ogDescription: 'Développement web fullstack, e-commerce, analytics et IA. Des solutions sur mesure pour propulser vos projets.',
+  title: () => t('seo.expertises.title'),
+  description: () => t('seo.expertises.description'),
+  ogTitle: () => t('seo.expertises.ogTitle'),
+  ogDescription: () => t('seo.expertises.ogDescription'),
   ogUrl: 'https://adrien-lloret.com/expertises',
   ogImage: 'https://adrien-lloret.com/images/og-image.png',
-  twitterTitle: 'Expertises | Adrien Lloret',
-  twitterDescription: 'Développement web fullstack, e-commerce, analytics et IA.',
+  twitterTitle: () => t('seo.expertises.ogTitle'),
+  twitterDescription: () => t('seo.expertises.ogDescription'),
   twitterImage: 'https://adrien-lloret.com/images/og-image.png'
 })
 
@@ -37,7 +40,37 @@ const ctaRef = ref<HTMLDivElement | null>(null)
 const scrollYRef = ref(0)
 let requestId: number | null = null
 
-const allCards = [...EXPERTISES]
+// Nombre de détails par expertise
+const detailsCount: Record<string, number> = {
+  '1': 3,
+  '2': 5,
+  '3': 4,
+  '4': 4
+}
+
+// Traduit les expertises dynamiquement
+const allCards = computed(() => {
+  return EXPERTISES.map(exp => {
+    if (exp.isCTA) {
+      return {
+        ...exp,
+        title: t('expertises.data.cta.title'),
+        description: t('expertises.data.cta.description')
+      }
+    }
+    const count = detailsCount[exp.id] || 0
+    const details: string[] = []
+    for (let i = 1; i <= count; i++) {
+      details.push(t(`expertises.data.${exp.id}.detail${i}`))
+    }
+    return {
+      ...exp,
+      title: t(`expertises.data.${exp.id}.title`),
+      description: t(`expertises.data.${exp.id}.description`),
+      details
+    }
+  })
+})
 
 const cardColors = ['bg-[#D1E5FF]', 'bg-[#F5D8D0]', 'bg-[#D8D0F5]', 'bg-[#E2F99E]']
 const offsets = [
@@ -156,13 +189,13 @@ const iconComponents: Record<string, any> = {
       <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#FF6D4D]/5 rounded-full blur-[120px] -z-10 animate-pulse delay-700"></div>
 
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FF6D4D]/10 text-[#FF6D4D] font-black text-[10px] uppercase tracking-[0.2em] mb-6 md:mb-8 animate-reveal-up">
-        <Zap class="w-3 h-3 fill-current" /> Expertise Technique
+        <Zap class="w-3 h-3 fill-current" /> {{ t('expertises.badge') }}
       </div>
       <h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-[150px] font-black text-slate-900 mb-6 md:mb-8 tracking-tighter leading-[0.8] uppercase animate-reveal-up [animation-delay:200ms]">
-        Mon <br /> <span class="text-[#7B61FF]">Savoir-faire.</span>
+        {{ t('expertises.title') }} <br /> <span class="text-[#7B61FF]">{{ t('expertises.titleHighlight') }}</span>
       </h1>
       <p class="text-base sm:text-lg md:text-2xl text-slate-400 font-medium max-w-2xl mx-auto leading-relaxed px-4 animate-reveal-up [animation-delay:400ms]">
-        Une combinaison d'outils de pointe et d'une vision produit stratégique pour propulser vos idées.
+        {{ t('expertises.description') }}
       </p>
 
       <!-- Scroll Indicator -->
@@ -172,7 +205,7 @@ const iconComponents: Record<string, any> = {
           scrollY > 100 ? 'opacity-0' : 'opacity-100'
         ]"
       >
-        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-300">Scrollez</span>
+        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-300">{{ t('expertises.scroll') }}</span>
         <div class="w-[1px] h-12 bg-gradient-to-b from-slate-200 to-transparent relative overflow-hidden">
           <div class="absolute top-0 left-0 w-full h-full bg-[#FF6D4D] animate-[scroll-line_2s_ease-in-out_infinite]"></div>
         </div>
@@ -215,7 +248,7 @@ const iconComponents: Record<string, any> = {
                         ctaActive ? 'scale-100 opacity-100 translate-y-0' : 'scale-75 opacity-0 translate-y-4'
                       ]"
                     >
-                      Un <br /><span class="text-[#E2F99E]">projet?</span>
+                      {{ t('expertises.ctaTitle') }} <br /><span class="text-[#E2F99E]">{{ t('expertises.ctaTitleHighlight') }}</span>
                     </h2>
                     <p
                       :class="[
@@ -246,8 +279,8 @@ const iconComponents: Record<string, any> = {
                       ctaActive ? 'opacity-100 scale-100 rotate-0' : 'opacity-0 scale-50 rotate-12'
                     ]"
                   >
-                    <NuxtLink to="/contact" class="group relative inline-flex items-center gap-4 px-8 py-5 bg-white text-black rounded-[2rem] font-black text-xl hover:scale-105 transition-all shadow-xl">
-                      Parlons-en <MousePointer2 class="w-6 h-6 group-hover:rotate-12 transition-transform" />
+                    <NuxtLink :to="localePath('/contact')" class="group relative inline-flex items-center gap-4 px-8 py-5 bg-white text-black rounded-[2rem] font-black text-xl hover:scale-105 transition-all shadow-xl">
+                      {{ t('expertises.ctaButton') }} <MousePointer2 class="w-6 h-6 group-hover:rotate-12 transition-transform" />
                     </NuxtLink>
                   </div>
                 </div>

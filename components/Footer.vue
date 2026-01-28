@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { Linkedin, Github, Mail, MapPin } from 'lucide-vue-next'
+
+const { t } = useI18n()
+const localePath = useLocalePath()
 </script>
 
 <template>
@@ -11,10 +14,10 @@ import { Linkedin, Github, Mail, MapPin } from 'lucide-vue-next'
             Adrien Lloret
           </div>
           <h3 class="text-3xl font-black text-slate-900 mb-6 tracking-tight max-w-sm">
-            Construisons votre projet <span class="text-[#FF6D4D]">ensemble</span>.
+            {{ t('footer.tagline') }} <span class="text-[#FF6D4D]">{{ t('footer.taglineHighlight') }}</span>.
           </h3>
           <p class="text-gray-500 max-w-sm text-lg font-medium leading-relaxed mb-8">
-            Je conçois, code et optimise votre projet avec précision et passion, pour un impact réel.
+            {{ t('footer.description') }}
           </p>
           <div class="flex gap-4">
             <a
@@ -41,21 +44,21 @@ import { Linkedin, Github, Mail, MapPin } from 'lucide-vue-next'
         </div>
 
         <div class="md:col-span-3 md:col-start-7">
-          <h4 class="font-black text-slate-900 mb-8 uppercase tracking-widest text-[10px]">Navigation</h4>
+          <h4 class="font-black text-slate-900 mb-8 uppercase tracking-widest text-[10px]">{{ t('footer.navigation') }}</h4>
           <ul class="flex flex-col space-y-1 text-gray-500 font-bold text-base">
             <li>
-              <NuxtLink to="/" class="inline-block py-2.5 px-4 -ml-4 rounded-xl hover:bg-black/5 hover:text-[#FF6D4D] transition-all">
-                Accueil
+              <NuxtLink :to="localePath('/')" class="inline-block py-2.5 px-4 -ml-4 rounded-xl hover:bg-black/5 hover:text-[#FF6D4D] transition-all">
+                {{ t('footer.home') }}
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/expertises" class="inline-block py-2.5 px-4 -ml-4 rounded-xl hover:bg-black/5 hover:text-[#FF6D4D] transition-all">
-                Expertises
+              <NuxtLink :to="localePath('/expertises')" class="inline-block py-2.5 px-4 -ml-4 rounded-xl hover:bg-black/5 hover:text-[#FF6D4D] transition-all">
+                {{ t('nav.expertises') }}
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/parcours" class="inline-block py-2.5 px-4 -ml-4 rounded-xl hover:bg-black/5 hover:text-[#FF6D4D] transition-all">
-                Parcours
+              <NuxtLink :to="localePath('/parcours')" class="inline-block py-2.5 px-4 -ml-4 rounded-xl hover:bg-black/5 hover:text-[#FF6D4D] transition-all">
+                {{ t('nav.parcours') }}
               </NuxtLink>
             </li>
           </ul>
@@ -63,11 +66,11 @@ import { Linkedin, Github, Mail, MapPin } from 'lucide-vue-next'
 
         <div class="md:col-span-3 flex items-start">
           <NuxtLink
-            to="/contact"
+            :to="localePath('/contact')"
             class="group relative inline-flex items-center px-10 py-5 bg-[#1A1A1A] text-white rounded-[2rem] font-black text-xl hover:scale-105 transition-all shadow-2xl"
           >
-            Me contacter <Mail class="w-5 h-5 ml-3" />
-            <div class="absolute -top-3 -right-3 bg-[#E2F99E] text-black text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter shadow-lg rotate-12">Un projet?</div>
+            {{ t('footer.contactMe') }} <Mail class="w-5 h-5 ml-3" />
+            <div class="absolute -top-3 -right-3 bg-[#E2F99E] text-black text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter shadow-lg rotate-12">{{ t('footer.projectBadge') }}</div>
           </NuxtLink>
         </div>
       </div>
@@ -75,16 +78,16 @@ import { Linkedin, Github, Mail, MapPin } from 'lucide-vue-next'
       <div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
           <div class="text-xs font-bold text-gray-400">
-            © {{ new Date().getFullYear() }} Adrien Lloret. Fait avec passion et beaucoup de café.
+            © {{ new Date().getFullYear() }} {{ t('footer.copyright') }}
           </div>
           <div class="flex items-center gap-2 text-xs font-bold text-gray-400">
             <MapPin class="w-3.5 h-3.5 text-[#FF6D4D]" />
-            <span>Basé en <strong class="text-slate-600">France</strong>, à <strong class="text-slate-600">Montpellier</strong> — disponible en remote</span>
+            <span>{{ t('footer.location') }} <strong class="text-slate-600">{{ t('footer.france') }}</strong>, à <strong class="text-slate-600">{{ t('footer.city') }}</strong> — {{ t('footer.remoteAvailable') }}</span>
           </div>
         </div>
         <div class="flex gap-8 text-xs font-black uppercase tracking-widest text-slate-400">
-          <NuxtLink to="/contact" class="py-2.5 px-5 -my-2.5 rounded-xl text-[#FF6D4D] hover:bg-[#FF6D4D]/10 transition-all">
-            Démarrer un projet
+          <NuxtLink :to="localePath('/contact')" class="py-2.5 px-5 -my-2.5 rounded-xl text-[#FF6D4D] hover:bg-[#FF6D4D]/10 transition-all">
+            {{ t('footer.startProject') }}
           </NuxtLink>
         </div>
       </div>

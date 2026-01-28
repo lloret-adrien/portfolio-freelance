@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import { Mail, Linkedin, Github, Sparkles } from 'lucide-vue-next'
 
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Contact',
-  description: 'Contactez-moi pour discuter de votre projet web. Développeur Fullstack Freelance disponible pour des missions e-commerce, SaaS et applications sur mesure.',
-  ogTitle: 'Contact | Adrien Lloret',
-  ogDescription: 'Un projet en tête ? Contactez-moi pour en discuter. Développeur Web Fullstack Freelance.',
+  title: () => t('seo.contact.title'),
+  description: () => t('seo.contact.description'),
+  ogTitle: () => t('seo.contact.ogTitle'),
+  ogDescription: () => t('seo.contact.ogDescription'),
   ogUrl: 'https://adrien-lloret.com/contact',
   ogImage: 'https://adrien-lloret.com/images/og-image.png',
-  twitterTitle: 'Contact | Adrien Lloret',
-  twitterDescription: 'Un projet en tête ? Contactez-moi pour en discuter.',
+  twitterTitle: () => t('seo.contact.ogTitle'),
+  twitterDescription: () => t('seo.contact.ogDescription'),
   twitterImage: 'https://adrien-lloret.com/images/og-image.png'
 })
 
@@ -33,15 +35,15 @@ useHead({
         <!-- Info Section -->
         <div class="lg:col-span-2">
           <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E2F99E] text-green-900 font-black text-[10px] uppercase tracking-widest mb-6">
-            <Sparkles class="w-3.5 h-3.5" /> Parlons de votre projet
+            <Sparkles class="w-3.5 h-3.5" /> {{ t('contact.badge') }}
           </div>
 
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tighter leading-[1.1] uppercase whitespace-normal">
-            On reste en <span class="scribble-highlight text-[#FF6D4D]">contact</span>
+            {{ t('contact.title') }} <span class="scribble-highlight text-[#FF6D4D]">{{ t('contact.titleHighlight') }}</span>
           </h1>
 
           <p class="text-lg sm:text-xl text-slate-500 font-medium mb-10 leading-relaxed text-balance">
-            Un projet en tête ou une vision à partager ? Écrivez-moi ou retrouvez-moi sur les réseaux.
+            {{ t('contact.description') }}
           </p>
 
           <div class="flex items-center gap-4">

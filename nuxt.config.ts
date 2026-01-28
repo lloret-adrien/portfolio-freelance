@@ -6,8 +6,25 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/tailwindcss',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/i18n'
   ],
+
+  i18n: {
+    locales: [
+      { code: 'fr', language: 'fr-FR', iso: 'fr-FR', file: 'fr.json', name: 'Français' },
+      { code: 'en', language: 'en-US', iso: 'en-US', file: 'en.json', name: 'English' }
+    ],
+    defaultLocale: 'fr',
+    strategy: 'prefix_except_default',
+    lazy: true,
+    langDir: './locales',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root'
+    }
+  },
 
   css: [
     '@/assets/css/main.css'
