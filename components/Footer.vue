@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Linkedin, Github, Mail } from 'lucide-vue-next'
+import { Linkedin, Github, Mail, MapPin } from 'lucide-vue-next'
 </script>
 
 <template>
@@ -73,8 +73,14 @@ import { Linkedin, Github, Mail } from 'lucide-vue-next'
       </div>
 
       <div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div class="text-xs font-bold text-gray-400">
-          © {{ new Date().getFullYear() }} Adrien Lloret. Fait avec passion et beaucoup de café.
+        <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+          <div class="text-xs font-bold text-gray-400">
+            © {{ new Date().getFullYear() }} Adrien Lloret. Fait avec passion et beaucoup de café.
+          </div>
+          <div class="flex items-center gap-2 text-xs font-bold text-gray-400">
+            <MapPin class="w-3.5 h-3.5 text-[#FF6D4D]" />
+            <span>Basé en <strong class="text-slate-600">France</strong>, à <strong class="text-slate-600">Montpellier</strong> — disponible en remote</span>
+          </div>
         </div>
         <div class="flex gap-8 text-xs font-black uppercase tracking-widest text-slate-400">
           <NuxtLink to="/contact" class="py-2.5 px-5 -my-2.5 rounded-xl text-[#FF6D4D] hover:bg-[#FF6D4D]/10 transition-all">
