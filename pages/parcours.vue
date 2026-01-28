@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import { Download } from 'lucide-vue-next'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
+
+const cvUrl = computed(() => {
+  return locale.value === 'fr'
+    ? '/cv/Adrien_LLORET_CV.pdf'
+    : '/cv/Adrien_LLORET_CV_English.pdf'
+})
 
 useSeoMeta({
   title: () => t('seo.parcours.title'),
@@ -41,10 +47,10 @@ useHead({
         </p>
 
         <div class="animate-reveal-up [animation-delay:450ms]">
-          <button class="group relative inline-flex items-center px-12 py-6 bg-[#1A1A1A] text-white rounded-[2rem] font-black text-2xl hover:scale-105 transition-all shadow-2xl">
+          <a :href="cvUrl" download class="group relative inline-flex items-center px-12 py-6 bg-[#1A1A1A] text-white rounded-[2rem] font-black text-2xl hover:scale-105 transition-all shadow-2xl">
             {{ t('parcours.downloadCV') }} <Download class="w-6 h-6 ml-3" />
             <div class="absolute -top-3 -right-3 bg-[#E2F99E] text-black text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter shadow-lg rotate-12">{{ t('parcours.cvVersion') }}</div>
-          </button>
+          </a>
         </div>
       </header>
 
