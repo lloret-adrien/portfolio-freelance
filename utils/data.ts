@@ -104,7 +104,7 @@ export const PROJECTS = [
       'Design minimaliste et impactant'
     ],
     imageUrl: '/images/portfolio.png',
-    link: 'https://adrienlloret.com'
+    link: 'https://adrien-lloret.com'
   },
 
   {

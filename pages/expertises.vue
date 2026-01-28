@@ -16,16 +16,16 @@ useSeoMeta({
   description: 'Découvrez mes expertises : développement web fullstack, e-commerce, analytics et intégration IA. Une combinaison d\'outils modernes et d\'une vision produit stratégique.',
   ogTitle: 'Expertises | Adrien Lloret',
   ogDescription: 'Développement web fullstack, e-commerce, analytics et IA. Des solutions sur mesure pour propulser vos projets.',
-  ogUrl: 'https://adrienlloret.com/expertises',
-  ogImage: 'https://adrienlloret.com/images/og-image.png',
+  ogUrl: 'https://adrien-lloret.com/expertises',
+  ogImage: 'https://adrien-lloret.com/images/og-image.png',
   twitterTitle: 'Expertises | Adrien Lloret',
   twitterDescription: 'Développement web fullstack, e-commerce, analytics et IA.',
-  twitterImage: 'https://adrienlloret.com/images/og-image.png'
+  twitterImage: 'https://adrien-lloret.com/images/og-image.png'
 })
 
 useHead({
   link: [
-    { rel: 'canonical', href: 'https://adrienlloret.com/expertises' }
+    { rel: 'canonical', href: 'https://adrien-lloret.com/expertises' }
   ]
 })
 

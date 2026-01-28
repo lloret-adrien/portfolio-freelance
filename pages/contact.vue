@@ -6,16 +6,16 @@ useSeoMeta({
   description: 'Contactez-moi pour discuter de votre projet web. Développeur Fullstack Freelance disponible pour des missions e-commerce, SaaS et applications sur mesure.',
   ogTitle: 'Contact | Adrien Lloret',
   ogDescription: 'Un projet en tête ? Contactez-moi pour en discuter. Développeur Web Fullstack Freelance.',
-  ogUrl: 'https://adrienlloret.com/contact',
-  ogImage: 'https://adrienlloret.com/images/og-image.png',
+  ogUrl: 'https://adrien-lloret.com/contact',
+  ogImage: 'https://adrien-lloret.com/images/og-image.png',
   twitterTitle: 'Contact | Adrien Lloret',
   twitterDescription: 'Un projet en tête ? Contactez-moi pour en discuter.',
-  twitterImage: 'https://adrienlloret.com/images/og-image.png'
+  twitterImage: 'https://adrien-lloret.com/images/og-image.png'
 })
 
 useHead({
   link: [
-    { rel: 'canonical', href: 'https://adrienlloret.com/contact' }
+    { rel: 'canonical', href: 'https://adrien-lloret.com/contact' }
   ]
 })
 </script>

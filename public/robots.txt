@@ -1,10 +1,10 @@
-# Robots.txt pour adrienlloret.com
+# Robots.txt pour adrien-lloret.com
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://adrienlloret.com/sitemap.xml
+Sitemap: https://adrien-lloret.com/sitemap.xml
 
 # Bloquer les ressources non essentielles
 User-agent: *

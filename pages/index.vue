@@ -19,16 +19,16 @@ useSeoMeta({
   description: 'Développeur Web Fullstack Freelance à Montpellier, France. Spécialisé en Vue.js, Nuxt et TypeScript. Applications web performantes, e-commerce et SaaS sur mesure. Disponible en remote.',
   ogTitle: 'Adrien Lloret | Développeur Web Fullstack Freelance à Montpellier',
   ogDescription: 'Développeur Freelance basé à Montpellier. Je conçois des produits web qui résolvent des problèmes et font grandir votre business. Disponible en remote.',
-  ogUrl: 'https://adrienlloret.com',
-  ogImage: 'https://adrienlloret.com/images/og-image.png',
+  ogUrl: 'https://adrien-lloret.com',
+  ogImage: 'https://adrien-lloret.com/images/og-image.png',
   twitterTitle: 'Adrien Lloret | Développeur Web Fullstack Freelance à Montpellier',
   twitterDescription: 'Développeur Freelance basé à Montpellier. Disponible en remote pour vos projets web.',
-  twitterImage: 'https://adrienlloret.com/images/og-image.png'
+  twitterImage: 'https://adrien-lloret.com/images/og-image.png'
 })
 
 useHead({
   link: [
-    { rel: 'canonical', href: 'https://adrienlloret.com' }
+    { rel: 'canonical', href: 'https://adrien-lloret.com' }
   ]
 })
 

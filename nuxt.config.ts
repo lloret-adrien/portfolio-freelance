@@ -36,13 +36,13 @@ export default defineNuxtConfig({
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'Adrien Lloret - Portfolio' },
         { property: 'og:locale', content: 'fr_FR' },
-        { property: 'og:image', content: 'https://adrienlloret.com/images/og-image.png' },
+        { property: 'og:image', content: 'https://adrien-lloret.com/images/og-image.png' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
         { property: 'og:image:alt', content: 'Adrien Lloret - Développeur Web Fullstack Freelance' },
         // Twitter Card
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:image', content: 'https://adrienlloret.com/images/og-image.png' },
+        { name: 'twitter:image', content: 'https://adrien-lloret.com/images/og-image.png' },
         { name: 'twitter:creator', content: '@adrienlloret' }
       ],
       link: [
@@ -52,7 +52,7 @@ export default defineNuxtConfig({
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap'
         },
-        { rel: 'canonical', href: 'https://adrienlloret.com' },
+        { rel: 'canonical', href: 'https://adrien-lloret.com' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
     },
