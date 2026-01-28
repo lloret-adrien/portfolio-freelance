@@ -18,12 +18,10 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'fr'
       },
-      title: 'Adrien Lloret | Développeur Web Fullstack Freelance',
       titleTemplate: '%s | Adrien Lloret',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-        { name: 'description', content: 'Développeur Web Fullstack Freelance à Montpellier, France. Spécialisé en Vue.js, Nuxt et TypeScript. Applications web performantes, e-commerce et SaaS sur mesure. Disponible en remote.' },
         { name: 'keywords', content: 'développeur web, fullstack, freelance, vue.js, nuxt, typescript, e-commerce, saas, montpellier, france, remote, développeur montpellier, freelance web france' },
         { name: 'geo.region', content: 'FR-34' },
         { name: 'geo.placename', content: 'Montpellier' },
