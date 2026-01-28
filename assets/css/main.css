@@ -1,0 +1,180 @@
+/* Base Styles */
+html {
+  font-size: 12px;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #FAFAFA;
+  color: #1A1A1A;
+}
+
+/* Glass Morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Grid Background */
+.bg-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+
+/* Scribble Highlight Animation */
+.scribble-highlight {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.scribble-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: -4px;
+  height: 35%;
+  background: #E2F99E;
+  z-index: -1;
+  transform: rotate(-1.5deg);
+  border-radius: 4px;
+  width: 0;
+  transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.scribble-active::after {
+  width: calc(100% + 12px) !important;
+}
+
+/* Text Reveal Animation */
+.text-reveal-container {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-right: 0.15em;
+}
+
+.text-reveal-item {
+  display: block;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.text-reveal-active {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+/* Reveal Up Animation */
+.animate-reveal-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: reveal-up 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes reveal-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pop In Animation */
+.animate-pop-in {
+  opacity: 0;
+  transform: scale(0.8) rotate(10deg);
+  animation: pop-in 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes pop-in {
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(3deg);
+  }
+}
+
+/* Float Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float {
+  animation: float 3.5s ease-in-out infinite;
+}
+
+/* Scroll Line Animation */
+@keyframes scroll-line {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Marquee Animation */
+.animate-marquee {
+  display: flex;
+  width: fit-content;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF6D4D;
+  border-radius: 10px;
+}
+
+/* Hide Scrollbar Utility */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Page Transitions */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1px);
+}
