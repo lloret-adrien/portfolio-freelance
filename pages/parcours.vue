@@ -1,5 +1,23 @@
 <script setup lang="ts">
 import { Download } from 'lucide-vue-next'
+
+useSeoMeta({
+  title: 'Parcours',
+  description: 'Découvrez mon parcours : +3 ans d\'expérience en développement web fullstack, Master Tech Lead spécialisé cybersécurité, et diverses expériences en startup et entreprise.',
+  ogTitle: 'Parcours | Adrien Lloret',
+  ogDescription: 'Mon parcours éducatif et professionnel : développement web, Master Tech Lead, expériences en startup.',
+  ogUrl: 'https://adrienlloret.com/parcours',
+  ogImage: 'https://adrienlloret.com/images/og-image.png',
+  twitterTitle: 'Parcours | Adrien Lloret',
+  twitterDescription: 'Mon parcours éducatif et professionnel en développement web.',
+  twitterImage: 'https://adrienlloret.com/images/og-image.png'
+})
+
+useHead({
+  link: [
+    { rel: 'canonical', href: 'https://adrienlloret.com/parcours' }
+  ]
+})
 </script>
 
 <template>

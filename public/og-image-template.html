@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>OG Image Template</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+    }
+    .og-container {
+      width: 1200px;
+      height: 630px;
+      background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .bg-circle-1 {
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      background: #FF6D4D;
+      opacity: 0.1;
+      border-radius: 50%;
+    }
+    .bg-circle-2 {
+      position: absolute;
+      bottom: -150px;
+      left: -150px;
+      width: 500px;
+      height: 500px;
+      background: #D1E5FF;
+      opacity: 0.3;
+      border-radius: 50%;
+    }
+    .content {
+      position: relative;
+      z-index: 10;
+      max-width: 650px;
+    }
+    .badge {
+      display: inline-block;
+      background: #E2F99E;
+      color: #1A1A1A;
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      padding: 10px 20px;
+      border-radius: 30px;
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-size: 72px;
+      font-weight: 900;
+      color: #1A1A1A;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    h1 span {
+      color: #FF6D4D;
+    }
+    p {
+      font-size: 24px;
+      color: #64748B;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .avatar-container {
+      position: relative;
+      z-index: 10;
+    }
+    .avatar {
+      width: 280px;
+      height: 280px;
+      background: #FF6D4D;
+      border-radius: 60px;
+      transform: rotate(3deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 120px;
+      color: white;
+      font-weight: 900;
+      box-shadow: 0 40px 80px rgba(255, 109, 77, 0.3);
+    }
+    .domain {
+      position: absolute;
+      bottom: 40px;
+      right: 80px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #94A3B8;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="og-container">
+    <div class="bg-circle-1"></div>
+    <div class="bg-circle-2"></div>
+
+    <div class="content">
+      <div class="badge">Développeur Freelance</div>
+      <h1>Adrien<br><span>Lloret</span></h1>
+      <p>Développeur Web Fullstack<br>Vue.js • Nuxt • TypeScript</p>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar">AL</div>
+    </div>
+
+    <div class="domain">adrienlloret.com</div>
+  </div>
+</body>
+</html>

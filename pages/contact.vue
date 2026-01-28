@@ -1,5 +1,23 @@
 <script setup lang="ts">
 import { Mail, Linkedin, Github, Sparkles } from 'lucide-vue-next'
+
+useSeoMeta({
+  title: 'Contact',
+  description: 'Contactez-moi pour discuter de votre projet web. Développeur Fullstack Freelance disponible pour des missions e-commerce, SaaS et applications sur mesure.',
+  ogTitle: 'Contact | Adrien Lloret',
+  ogDescription: 'Un projet en tête ? Contactez-moi pour en discuter. Développeur Web Fullstack Freelance.',
+  ogUrl: 'https://adrienlloret.com/contact',
+  ogImage: 'https://adrienlloret.com/images/og-image.png',
+  twitterTitle: 'Contact | Adrien Lloret',
+  twitterDescription: 'Un projet en tête ? Contactez-moi pour en discuter.',
+  twitterImage: 'https://adrienlloret.com/images/og-image.png'
+})
+
+useHead({
+  link: [
+    { rel: 'canonical', href: 'https://adrienlloret.com/contact' }
+  ]
+})
 </script>
 
 <template>

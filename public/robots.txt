@@ -1,0 +1,12 @@
+# Robots.txt pour adrienlloret.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://adrienlloret.com/sitemap.xml
+
+# Bloquer les ressources non essentielles
+User-agent: *
+Disallow: /_nuxt/
+Disallow: /api/

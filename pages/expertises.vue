@@ -11,6 +11,24 @@ import {
 } from 'lucide-vue-next'
 import { EXPERTISES } from '~/utils/data'
 
+useSeoMeta({
+  title: 'Expertises',
+  description: 'Découvrez mes expertises : développement web fullstack, e-commerce, analytics et intégration IA. Une combinaison d\'outils modernes et d\'une vision produit stratégique.',
+  ogTitle: 'Expertises | Adrien Lloret',
+  ogDescription: 'Développement web fullstack, e-commerce, analytics et IA. Des solutions sur mesure pour propulser vos projets.',
+  ogUrl: 'https://adrienlloret.com/expertises',
+  ogImage: 'https://adrienlloret.com/images/og-image.png',
+  twitterTitle: 'Expertises | Adrien Lloret',
+  twitterDescription: 'Développement web fullstack, e-commerce, analytics et IA.',
+  twitterImage: 'https://adrienlloret.com/images/og-image.png'
+})
+
+useHead({
+  link: [
+    { rel: 'canonical', href: 'https://adrienlloret.com/expertises' }
+  ]
+})
+
 const lerpScroll = ref(0)
 const ctaActive = ref(false)
 const scrollY = ref(0)

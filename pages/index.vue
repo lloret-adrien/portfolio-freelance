@@ -14,6 +14,24 @@ import {
 } from 'lucide-vue-next'
 import { EXPERTISES, PROJECTS } from '~/utils/data'
 
+useSeoMeta({
+  title: 'Développeur Web Fullstack Freelance',
+  description: 'Développeur Web Fullstack Freelance spécialisé en Vue.js, Nuxt et TypeScript. Je conçois des applications web performantes, des sites e-commerce et des solutions SaaS sur mesure.',
+  ogTitle: 'Adrien Lloret | Développeur Web Fullstack Freelance',
+  ogDescription: 'Je conçois des produits web qui résolvent des problèmes et font grandir votre business. Vue.js, Nuxt, TypeScript, E-commerce, SaaS.',
+  ogUrl: 'https://adrienlloret.com',
+  ogImage: 'https://adrienlloret.com/images/og-image.png',
+  twitterTitle: 'Adrien Lloret | Développeur Web Fullstack Freelance',
+  twitterDescription: 'Je conçois des produits web qui résolvent des problèmes et font grandir votre business.',
+  twitterImage: 'https://adrienlloret.com/images/og-image.png'
+})
+
+useHead({
+  link: [
+    { rel: 'canonical', href: 'https://adrienlloret.com' }
+  ]
+})
+
 const words = ['Web', 'Fullstack', "+3 ans d'xp"]
 const wordIndex = ref(0)
 const isBorderActive = ref(false)
