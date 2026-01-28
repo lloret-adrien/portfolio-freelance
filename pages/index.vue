@@ -9,7 +9,6 @@ import {
   Mail,
   Linkedin,
   Github,
-  ChevronUp,
   ArrowUpRight
 } from 'lucide-vue-next'
 import { EXPERTISES, PROJECTS } from '~/utils/data'
@@ -82,8 +81,6 @@ onUnmounted(() => {
   isMounted = false
 })
 
-const { showScrollTop, scrollToTop } = useScrollTop()
-
 const currentWord = computed(() => words.value[wordIndex.value])
 
 const softSkills = computed(() => [
@@ -103,18 +100,6 @@ const methodSteps = computed(() => [
 
 <template>
   <div class="pb-24 overflow-x-hidden -mt-32">
-    <!-- Scroll to Top Mobile -->
-    <button
-      @click="scrollToTop"
-      :class="[
-        'md:hidden fixed bottom-10 right-6 z-[70] p-4 bg-[#FF6D4D] text-white rounded-full shadow-2xl transition-all duration-500 transform',
-        showScrollTop ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-50 pointer-events-none'
-      ]"
-      :aria-label="t('common.backToTop')"
-    >
-      <ChevronUp class="w-6 h-6 stroke-[3px]" />
-    </button>
-
     <!-- SECTION 1: HERO -->
     <section class="relative px-6 py-20 lg:py-32 bg-grid min-h-screen flex items-center">
       <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

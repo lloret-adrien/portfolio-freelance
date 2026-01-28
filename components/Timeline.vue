@@ -153,7 +153,7 @@ const setItemRef = (el: any, index: number) => {
                   isActive(index) ? 'text-slate-900' : 'text-slate-400'
                 ]"
               >
-                {{ item.title }}
+                {{ $t(`parcours.data.${item.id}.title`) }}
               </h4>
 
               <p
@@ -162,7 +162,7 @@ const setItemRef = (el: any, index: number) => {
                   isActive(index) ? 'text-[#7B61FF]' : 'text-slate-400'
                 ]"
               >
-                {{ item.subtitle }}
+                {{ $t(`parcours.data.${item.id}.subtitle`) }}
               </p>
 
               <p
@@ -171,7 +171,7 @@ const setItemRef = (el: any, index: number) => {
                   isActive(index) ? 'text-slate-500' : 'text-slate-300'
                 ]"
               >
-                {{ item.description }}
+                {{ $t(`parcours.data.${item.id}.description`) }}
               </p>
 
               <div :class="['mt-8 flex', item.type === 'education' ? 'md:justify-end' : 'md:justify-start']">

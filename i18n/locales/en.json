@@ -135,7 +135,51 @@
     "downloadCV": "Download my CV",
     "cvVersion": "Version 4.2",
     "workExperience": "Work Experience",
-    "education": "Education"
+    "education": "Education",
+    "data": {
+      "1": {
+        "year": "2023 - Present",
+        "title": "Freelance Web Developer",
+        "subtitle": "",
+        "description": "Service provision, design and development of custom SaaS products for clients."
+      },
+      "2": {
+        "year": "2023",
+        "title": "Frontend Developer",
+        "subtitle": "U'RSELF",
+        "description": "Contributed to improving client and internal applications, performance optimization and user experience enhancement."
+      },
+      "3": {
+        "year": "2022 - 2023",
+        "title": "Master's Tech Lead",
+        "subtitle": "Cybersecurity Specialization",
+        "description": "Acquired advanced skills in software architecture, secure coding practices and technical team management methodologies."
+      },
+      "4": {
+        "year": "2021 - 2022",
+        "title": "Fullstack Developer",
+        "subtitle": "Mycater",
+        "description": "Development and maintenance of the e-commerce site, front-end and back-end integration, and participation in technology evolution."
+      },
+      "5": {
+        "year": "2021 - 2022",
+        "title": "Bachelor's in Web Development",
+        "subtitle": "Digital Campus | Bordeaux",
+        "description": "Deepening knowledge of modern frameworks, development best practices and project management."
+      },
+      "6": {
+        "year": "2021",
+        "title": "Web Development Internship",
+        "subtitle": "Groupama G2S",
+        "description": "Participated in developing an internal tool for client file management."
+      },
+      "7": {
+        "year": "2019 - 2021",
+        "title": "Associate's in Computer Science",
+        "subtitle": "IUT Montpellier",
+        "description": "Acquired a solid foundation in core principles (Project management, Networks, Security, PHP, HTML/CSS, JavaScript, SQL)"
+      }
+    }
   },
   "contact": {
     "badge": "Let's talk about your project",

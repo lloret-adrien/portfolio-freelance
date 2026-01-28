@@ -120,7 +120,7 @@ const handleScroll = () => {
 const animate = () => {
   const prev = lerpScroll.value
   const target = scrollYRef.value
-  const next = prev + (target - prev) * 0.05
+  const next = prev + (target - prev) * 0.12
 
   lerpScroll.value = Math.abs(next - target) < 0.1 ? target : next
 
@@ -216,7 +216,7 @@ const iconComponents: Record<string, any> = {
     <!-- ZONE DE SCROLL DES CARTES -->
     <div
       class="relative z-10 w-full"
-      :style="{ height: `${(allCards.length + 2) * 100}vh` }"
+      :style="{ height: `${(allCards.length * 45) + 100}vh` }"
     >
       <div class="max-w-4xl lg:max-w-5xl mx-auto px-4 sm:px-6">
         <div class="relative pt-[100vh] flex flex-col items-center">
@@ -225,7 +225,7 @@ const iconComponents: Record<string, any> = {
             :key="exp.id"
             :ref="(el) => { if (exp.isCTA) ctaRef = el as HTMLDivElement }"
             :class="[
-              'sticky top-[calc(50vh-175px)] md:top-[calc(50vh-210px)] w-full h-[350px] md:h-[420px] rounded-[2.5rem] md:rounded-[3.5rem] p-8 md:p-14 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.25)] border border-black/5 transition-transform duration-150 ease-out hover:scale-[1.01] group overflow-hidden mb-[100vh]',
+              'sticky top-[calc(50vh-175px)] md:top-[calc(50vh-210px)] w-full h-[350px] md:h-[420px] rounded-[2.5rem] md:rounded-[3.5rem] p-8 md:p-14 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.25)] border border-black/5 transition-transform duration-150 ease-out hover:scale-[1.01] group overflow-hidden mb-[45vh]',
               getCardColor(exp, idx),
               getTextColor(exp)
             ]"

@@ -135,7 +135,51 @@
     "downloadCV": "Télécharger mon CV",
     "cvVersion": "Version 4.2",
     "workExperience": "Expérience Pro",
-    "education": "Formation"
+    "education": "Formation",
+    "data": {
+      "1": {
+        "year": "2023 - Aujourd'hui",
+        "title": "Développeur Web Freelance",
+        "subtitle": "",
+        "description": "Prestation de services, conception et développement de produits SaaS sur mesure pour des clients."
+      },
+      "2": {
+        "year": "2023",
+        "title": "Développeur FrontEnd",
+        "subtitle": "U'RSELF",
+        "description": "Participation à l'amélioration des applications clientes et interne, optimisation des performances et amélioration de l'expérience utilisateur."
+      },
+      "3": {
+        "year": "2022 - 2023",
+        "title": "Master Tech Lead",
+        "subtitle": "Spécialisation en Cybersécurité",
+        "description": "Acquisition de compétences avancées en architecture logicielle, pratiques de codage sécurisé et méthodologies de management d'équipe technique."
+      },
+      "4": {
+        "year": "2021 - 2022",
+        "title": "Développeur Fullstack",
+        "subtitle": "Mycater",
+        "description": "Développement et maintenance du site e-commerce, intégration front-end et back-end, et participation à l'évolution des technos."
+      },
+      "5": {
+        "year": "2021 - 2022",
+        "title": "Bachelor en Développement Web",
+        "subtitle": "Digital Campus | Bordeaux",
+        "description": "Approfondissement des frameworks modernes, des bonnes pratiques de développement et de gestion de projet."
+      },
+      "6": {
+        "year": "2021",
+        "title": "Stage Développement Web",
+        "subtitle": "Groupama G2S",
+        "description": "Participation au développement d'un outil à usage interne de gestion de fichiers clients."
+      },
+      "7": {
+        "year": "2019 - 2021",
+        "title": "DUT Informatique",
+        "subtitle": "IUT Montpellier",
+        "description": "Acquisition d'une solide base des principes fondamentaux (Gestion de projet, Réseaux, Sécurité, PHP, HTML/CSS, JavaScript, SQL)"
+      }
+    }
   },
   "contact": {
     "badge": "Parlons de votre projet",
