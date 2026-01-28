@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Download, Terminal } from 'lucide-vue-next'
+import { Download } from 'lucide-vue-next'
 </script>
 
 <template>
@@ -7,9 +7,6 @@ import { Download, Terminal } from 'lucide-vue-next'
     <div class="max-w-6xl mx-auto pt-24">
       <!-- Header haute énergie avec animations d'apparition -->
       <header class="mb-32 text-center relative">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 opacity-[0.03] animate-reveal-up [animation-delay:600ms]">
-          <Terminal class="w-96 h-96" />
-        </div>
 
         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 text-slate-500 font-black text-[10px] uppercase tracking-[0.2em] mb-8 animate-reveal-up">
           Éducations & Expériences

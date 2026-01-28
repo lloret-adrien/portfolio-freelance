@@ -1,11 +1,11 @@
 /* Base Styles */
 html {
   font-size: 12px;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Outfit', sans-serif;
-  scroll-behavior: smooth;
   background-color: #FAFAFA;
   color: #1A1A1A;
 }

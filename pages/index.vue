@@ -9,7 +9,8 @@ import {
   Mail,
   Linkedin,
   Github,
-  ChevronUp
+  ChevronUp,
+  ArrowUpRight
 } from 'lucide-vue-next'
 import { EXPERTISES, PROJECTS } from '~/utils/data'
 
@@ -96,9 +97,18 @@ const softSkills = ['Esprit créatif', 'Souci du détail', 'Adaptabilité', "Rap
             Je ne fais pas que coder. Je conçois des produits qui résolvent des problèmes et font grandir votre business avec une <span class="text-black font-bold">touche de peps.</span>
           </p>
 
-          <div class="flex flex-wrap gap-4 animate-reveal-up [animation-delay:0.6s]">
-            <NuxtLink to="/contact" class="px-10 py-5 bg-green-500 text-white rounded-2xl font-black text-lg hover:bg-green-600 hover:scale-105 transition-all shadow-xl shadow-green-500/20 flex items-center gap-3">
-              Contactez-moi <ArrowRight class="w-5 h-5" />
+          <div class="flex flex-wrap gap-6 animate-reveal-up [animation-delay:0.6s] justify-center sm:justify-start">
+            <NuxtLink
+              to="/contact"
+              class="group relative inline-flex items-center gap-6 px-10 py-5 bg-[#1A1A1A] text-white rounded-2xl font-black text-2xl hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-[#FF6D4D]/20 hover:shadow-[#FF6D4D]/50"
+            >
+              Me contacter
+              <div class="bg-[#FF6D4D] p-2.5 rounded-full group-hover:rotate-45 transition-transform duration-500">
+                <ArrowUpRight class="w-6 h-6" />
+              </div>
+              <div class="absolute -top-3 -right-3 bg-[#E2F99E] text-black text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-tighter shadow-lg -rotate-6 group-hover:rotate-0 transition-transform">
+                Un Projet ?
+              </div>
             </NuxtLink>
             <a href="#projets" class="px-10 py-5 bg-white border-2 border-slate-100 text-slate-900 rounded-2xl font-black text-lg hover:border-[#FF6D4D] transition-all flex items-center gap-3">
               Voir mes projets

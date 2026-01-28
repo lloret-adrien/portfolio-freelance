@@ -1,3 +1,6 @@
+<!--
+  Page désactivée - Les projets ouvrent maintenant directement leur lien externe
+
 <script setup lang="ts">
 import { ArrowLeft, CheckCircle2, User, Zap, Boxes } from 'lucide-vue-next'
 import { PROJECTS } from '~/utils/data'
@@ -17,7 +20,6 @@ if (!project.value) {
 
 <template>
   <div v-if="project" class="pb-24">
-    <!-- Header -->
     <section class="bg-white px-6 pt-32 pb-24 border-b border-gray-50">
       <div class="max-w-5xl mx-auto">
         <NuxtLink to="/" class="inline-flex items-center text-slate-400 hover:text-indigo-600 font-bold mb-12 transition-colors">
@@ -41,7 +43,6 @@ if (!project.value) {
       </div>
     </section>
 
-    <!-- Grille de contenu -->
     <section class="px-6 py-24">
       <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-24">
         <div class="lg:col-span-2 space-y-16">
@@ -108,4 +109,14 @@ if (!project.value) {
       </div>
     </section>
   </div>
+</template>
+-->
+
+<script setup lang="ts">
+// Page désactivée - redirige vers l'accueil
+navigateTo('/')
+</script>
+
+<template>
+  <div></div>
 </template>

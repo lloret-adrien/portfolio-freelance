@@ -3,7 +3,7 @@ import { Mail, Linkedin, Github, Sparkles } from 'lucide-vue-next'
 </script>
 
 <template>
-  <div class="min-h-[110vh] bg-[#D1E5FF] px-6 flex items-center justify-center -mt-32 pt-20 sm:pt-32">
+  <div class="min-h-screen bg-[#D1E5FF] px-6 flex items-center justify-center -mt-32 pt-20 sm:pt-32">
     <div class="max-w-7xl w-full bg-white p-6 sm:p-10 md:p-12 lg:p-20 rounded-2xl sm:rounded-[4rem] shadow-2xl relative overflow-hidden mt-4 mb-10 sm:my-12">
 
       <!-- Decorative elements -->

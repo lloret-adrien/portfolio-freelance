@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ExternalLink } from 'lucide-vue-next'
 import type { PROJECTS } from '~/utils/data'
 
 defineProps<{
@@ -7,8 +8,10 @@ defineProps<{
 </script>
 
 <template>
-  <NuxtLink
-    :to="`/projets/${project.slug}`"
+  <a
+    :href="project.link"
+    target="_blank"
+    rel="noopener noreferrer"
     class="bg-white rounded-[2.5rem] p-6 sm:p-7 border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#FF6D4D]/30 transition-all duration-500 group flex flex-col h-full text-left outline-none focus:ring-4 focus:ring-[#FF6D4D]/20 relative"
   >
     <div
@@ -25,12 +28,17 @@ defineProps<{
         :alt="project.name"
         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
       />
+      <!-- Icon open tab overlay -->
+      <div class="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+        <ExternalLink class="w-5 h-5 text-slate-700" />
+      </div>
     </div>
 
     <div class="flex items-center justify-between gap-2 mb-5">
       <h3 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tighter w-full truncate group-hover:text-[#FF6D4D] transition-colors duration-300">
         {{ project.name }}
       </h3>
+      <ExternalLink class="w-5 h-5 text-slate-400 group-hover:text-[#FF6D4D] transition-colors duration-300 shrink-0" />
     </div>
 
     <p class="text-slate-500 text-base font-medium leading-relaxed mb-8 line-clamp-3">
@@ -46,7 +54,7 @@ defineProps<{
         <div
           :class="[
             'w-4 h-4 rounded-full flex items-center justify-center text-[7px] font-black shrink-0',
-            i % 2 === 0 ? 'bg-black text-white' : 'bg-[#007FFF] text-white'
+            ['Nuxt', 'Vue', 'Vue.js', 'Nuxt.js'].includes(tech) ? 'bg-[#00DC82] text-white' : (i % 2 === 0 ? 'bg-black text-white' : 'bg-[#007FFF] text-white')
           ]"
         >
           {{ tech[0] }}
@@ -54,5 +62,5 @@ defineProps<{
         <span class="text-[10px] font-black text-slate-600 uppercase tracking-tight">{{ tech }}</span>
       </div>
     </div>
-  </NuxtLink>
+  </a>
 </template>

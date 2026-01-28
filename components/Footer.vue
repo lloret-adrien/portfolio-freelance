@@ -61,12 +61,14 @@ import { Linkedin, Github, Mail } from 'lucide-vue-next'
           </ul>
         </div>
 
-        <div class="md:col-span-3">
-          <h4 class="font-black text-slate-900 mb-8 uppercase tracking-widest text-[10px]">Contact Rapide</h4>
-          <p class="text-sm text-gray-400 font-medium leading-relaxed">
-            Basé en Europe, disponible pour des missions à l'international (Freelance, VIE).
-            Réponse sous 24h garantie.
-          </p>
+        <div class="md:col-span-3 flex items-start">
+          <NuxtLink
+            to="/contact"
+            class="group relative inline-flex items-center px-10 py-5 bg-[#1A1A1A] text-white rounded-[2rem] font-black text-xl hover:scale-105 transition-all shadow-2xl"
+          >
+            Me contacter <Mail class="w-5 h-5 ml-3" />
+            <div class="absolute -top-3 -right-3 bg-[#E2F99E] text-black text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter shadow-lg rotate-12">Un projet?</div>
+          </NuxtLink>
         </div>
       </div>
 

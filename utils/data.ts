@@ -60,7 +60,8 @@ export const PROJECTS = [
       'Amilioration SEO & Performances',
       'Experience utilisateurs'
     ],
-    imageUrl: '/images/deuxbrins.png'
+    imageUrl: '/images/deuxbrins.png',
+    link: 'https://deuxbrins.com'
   },
 
   {
@@ -80,7 +81,30 @@ export const PROJECTS = [
       'Architecture scalable orientee SaaS',
       'Paiement integre via Stripe'
     ],
-    imageUrl: '/images/bestframe2.png'
+    imageUrl: '/images/bestframe.png',
+    link: 'https://bestframe.pro'
+  },
+
+
+  {
+    id: 'portfolio',
+    slug: 'portfolio',
+    name: 'Portfolio',
+    type: 'Portfolio Premium',
+    shortDescription: 'Mon portfolio personnel, concu pour allier design minimaliste et performances optimales.',
+    fullDescription: 'Ce portfolio est la vitrine de mon savoir-faire technique et creatif. Developpe avec React et Tailwind CSS, il met l\'accent sur l\'experience utilisateur et les animations fluides.',
+    techs: ['Nuxt', 'Swiper', 'Tailwind', 'PostHog'],
+    impact: 'Identite visuelle forte',
+    context: 'Besoin d\'un espace centralise pour presenter mes projets et mon parcours de maniere haut de gamme.',
+    role: 'Product Designer & Lead Dev',
+    solution: 'Architecture basee sur des composants reutilisables et animations personnalisees.',
+    results: [
+      'Experience immersive fluide',
+      'Score Performance optimal',
+      'Design minimaliste et impactant'
+    ],
+    imageUrl: '/images/portfolio.png',
+    link: 'https://adrienlloret.com'
   },
 
   {
@@ -100,7 +124,8 @@ export const PROJECTS = [
       'Narration visuelle differenciante',
       'Forte identite personnelle'
     ],
-    imageUrl: '/images/3D.png'
+    imageUrl: '/images/3D.png',
+    link: 'adrien-3d.netlify.app'
   },
 
   {
@@ -120,28 +145,9 @@ export const PROJECTS = [
       'Integration de fonctionnalites communautaires',
       'Experience utilisateur fluide'
     ],
-    imageUrl: '/images/slym.png'
+    imageUrl: '/images/slym.png',
+    link: 'https://slym.co'
   },
-
-  {
-    id: 'portfolio',
-    slug: 'portfolio',
-    name: 'Portfolio',
-    type: 'Portfolio Premium',
-    shortDescription: 'Mon portfolio personnel, concu pour allier design minimaliste et performances optimales.',
-    fullDescription: 'Ce portfolio est la vitrine de mon savoir-faire technique et creatif. Developpe avec React et Tailwind CSS, il met l\'accent sur l\'experience utilisateur et les animations fluides.',
-    techs: ['Nuxt', 'Swiper', 'Tailwind', 'PostHog'],
-    impact: 'Identite visuelle forte',
-    context: 'Besoin d\'un espace centralise pour presenter mes projets et mon parcours de maniere haut de gamme.',
-    role: 'Product Designer & Lead Dev',
-    solution: 'Architecture basee sur des composants reutilisables et animations personnalisees.',
-    results: [
-      'Experience immersive fluide',
-      'Score Performance optimal',
-      'Design minimaliste et impactant'
-    ],
-    imageUrl: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=2070'
-  }
 ]
 
 
