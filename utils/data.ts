@@ -125,7 +125,7 @@ export const PROJECTS = [
       'Forte identite personnelle'
     ],
     imageUrl: '/images/3D.png',
-    link: 'adrien-3d.netlify.app'
+    link: 'https://adrien-3d.netlify.app'
   },
 
   {
