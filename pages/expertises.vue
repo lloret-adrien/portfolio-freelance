@@ -219,7 +219,7 @@ const iconComponents: Record<string, any> = {
       :style="{ height: `${(allCards.length * 60) + 100}vh` }"
     >
       <div class="max-w-4xl lg:max-w-5xl mx-auto px-4 sm:px-6">
-        <div class="relative pt-[100vh] flex flex-col items-center">
+        <div class="relative pt-[100vh] pb-[40vh] flex flex-col items-center">
           <div
             v-for="(exp, idx) in allCards"
             :key="exp.id"
