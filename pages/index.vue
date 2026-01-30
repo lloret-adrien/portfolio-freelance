@@ -267,7 +267,7 @@ const methodSteps = computed(() => [
                   { name: 'VueJS', url: 'https://vuejs.org/', iconClass: 'w-5 h-5 bg-[#4FC08D] rounded-full flex items-center justify-center text-[8px] font-black text-white', iconText: 'V' },
                   { name: 'PostgreSQL', url: 'https://www.postgresql.org/', iconType: 'database' },
                   { name: 'Nuxt', url: 'https://nuxt.com/', iconClass: 'w-5 h-5 bg-[#00DC82] text-white rounded-full flex items-center justify-center text-[8px] font-black', iconText: 'N' },
-                  { name: 'Tailwind', url: 'https://tailwindcss.com/', iconType: 'globe' },
+                  { name: 'Tailwind', url: 'https://tailwindcss.com/', iconType: 'tailwind' },
                   { name: 'HTML5', url: 'https://developer.mozilla.org/fr/docs/Web/HTML', iconClass: 'text-xs font-black text-[#E34F26]', iconText: 'H5' },
                   { name: 'CSS', url: 'https://developer.mozilla.org/fr/docs/Web/CSS', iconClass: 'text-xs font-black text-[#1572B6]', iconText: 'C3' },
                   { name: 'TypeScript', url: 'https://www.typescriptlang.org/', iconClass: 'w-5 h-5 bg-[#3178C6] text-white rounded flex items-center justify-center text-[10px] font-black', iconText: 'TS' },
@@ -281,7 +281,9 @@ const methodSteps = computed(() => [
                 class="bg-white px-5 py-3.5 rounded-2xl border border-gray-100 flex items-center gap-4 shadow-sm hover:shadow-md hover:border-[#FF6D4D]/30 transition-all group/skill"
               >
                 <Database v-if="skill.iconType === 'database'" class="w-5 h-5 text-[#336791]" />
-                <Globe v-else-if="skill.iconType === 'globe'" class="w-5 h-5 text-[#06B6D4]" />
+                <svg v-else-if="skill.iconType === 'tailwind'" viewBox="0 0 24 24" class="w-5 h-5">
+                  <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z" fill="#06B6D4"/>
+                </svg>
                 <GitBranch v-else-if="skill.iconType === 'git'" class="w-5 h-5 text-[#F05032]" />
                 <div v-else :class="skill.iconClass">{{ skill.iconText }}</div>
                 <span class="text-base font-bold text-slate-700 group-hover/skill:text-[#FF6D4D]">{{ skill.name }}</span>
