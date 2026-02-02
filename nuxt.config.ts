@@ -66,7 +66,7 @@ export default defineNuxtConfig({
         { property: 'og:image:alt', content: 'Adrien Lloret - Développeur Web Fullstack Freelance' },
         // Twitter Card
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:image', content: 'https://adrien-lloret.com/images/og-image.png' },
+        { name: 'twitter:image', content: 'https://adrien-lloret.com/images/portfolio.png' },
         { name: 'twitter:creator', content: '@adrienlloret' }
       ],
       link: [
