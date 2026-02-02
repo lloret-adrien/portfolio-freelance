@@ -58,9 +58,9 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#FF6D4D' },
         // Open Graph
         { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'Adrien Lloret - Portfolio' },
+        { property: 'og:site_name', content: 'Développeur Web Freelance | Sites Web, Ecommerce et Applications' },
         { property: 'og:locale', content: 'fr_FR' },
-        { property: 'og:image', content: 'https://adrien-lloret.com/images/og-image.png' },
+        { property: 'og:image', content: 'https://adrien-lloret.com/images/portfolio.png' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
         { property: 'og:image:alt', content: 'Adrien Lloret - Développeur Web Fullstack Freelance' },
@@ -76,7 +76,6 @@ export default defineNuxtConfig({
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap'
         },
-        { rel: 'canonical', href: 'https://adrien-lloret.com' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
     },

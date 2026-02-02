@@ -2,13 +2,15 @@
 import { Mail, Linkedin, Github, Sparkles } from 'lucide-vue-next'
 
 const { t } = useI18n()
+const route = useRoute()
+const canonicalUrl = computed(() => `https://adrien-lloret.com${route.path}`)
 
 useSeoMeta({
   title: () => t('seo.contact.title'),
   description: () => t('seo.contact.description'),
   ogTitle: () => t('seo.contact.ogTitle'),
   ogDescription: () => t('seo.contact.ogDescription'),
-  ogUrl: 'https://adrien-lloret.com/contact',
+  ogUrl: canonicalUrl,
   ogImage: 'https://adrien-lloret.com/images/og-image.png',
   twitterTitle: () => t('seo.contact.ogTitle'),
   twitterDescription: () => t('seo.contact.ogDescription'),
@@ -17,7 +19,7 @@ useSeoMeta({
 
 useHead({
   link: [
-    { rel: 'canonical', href: 'https://adrien-lloret.com/contact' }
+    { rel: 'canonical', href: canonicalUrl }
   ]
 })
 </script>

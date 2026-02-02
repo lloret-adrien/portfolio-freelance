@@ -2,6 +2,8 @@
 import { Download } from 'lucide-vue-next'
 
 const { t, locale } = useI18n()
+const route = useRoute()
+const canonicalUrl = computed(() => `https://adrien-lloret.com${route.path}`)
 
 const cvUrl = computed(() => {
   return locale.value === 'fr'
@@ -14,7 +16,7 @@ useSeoMeta({
   description: () => t('seo.parcours.description'),
   ogTitle: () => t('seo.parcours.ogTitle'),
   ogDescription: () => t('seo.parcours.ogDescription'),
-  ogUrl: 'https://adrien-lloret.com/parcours',
+  ogUrl: canonicalUrl,
   ogImage: 'https://adrien-lloret.com/images/og-image.png',
   twitterTitle: () => t('seo.parcours.ogTitle'),
   twitterDescription: () => t('seo.parcours.ogDescription'),
@@ -23,7 +25,7 @@ useSeoMeta({
 
 useHead({
   link: [
-    { rel: 'canonical', href: 'https://adrien-lloret.com/parcours' }
+    { rel: 'canonical', href: canonicalUrl }
   ]
 })
 </script>

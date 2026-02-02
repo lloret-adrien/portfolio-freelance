@@ -13,13 +13,15 @@ import { EXPERTISES } from '~/utils/data'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
+const route = useRoute()
+const canonicalUrl = computed(() => `https://adrien-lloret.com${route.path}`)
 
 useSeoMeta({
   title: () => t('seo.expertises.title'),
   description: () => t('seo.expertises.description'),
   ogTitle: () => t('seo.expertises.ogTitle'),
   ogDescription: () => t('seo.expertises.ogDescription'),
-  ogUrl: 'https://adrien-lloret.com/expertises',
+  ogUrl: canonicalUrl,
   ogImage: 'https://adrien-lloret.com/images/og-image.png',
   twitterTitle: () => t('seo.expertises.ogTitle'),
   twitterDescription: () => t('seo.expertises.ogDescription'),
@@ -28,7 +30,7 @@ useSeoMeta({
 
 useHead({
   link: [
-    { rel: 'canonical', href: 'https://adrien-lloret.com/expertises' }
+    { rel: 'canonical', href: canonicalUrl }
   ]
 })
 
