@@ -11,10 +11,10 @@ useSeoMeta({
   ogTitle: () => t('seo.contact.ogTitle'),
   ogDescription: () => t('seo.contact.ogDescription'),
   ogUrl: canonicalUrl,
-  ogImage: 'https://adrien-lloret.com/images/og-image.png',
+  ogImage: 'https://adrien-lloret.com/images/portfolio.png',
   twitterTitle: () => t('seo.contact.ogTitle'),
   twitterDescription: () => t('seo.contact.ogDescription'),
-  twitterImage: 'https://adrien-lloret.com/images/og-image.png'
+  twitterImage: 'https://adrien-lloret.com/images/portfolio.png'
 })
 
 useHead({

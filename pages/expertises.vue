@@ -22,10 +22,10 @@ useSeoMeta({
   ogTitle: () => t('seo.expertises.ogTitle'),
   ogDescription: () => t('seo.expertises.ogDescription'),
   ogUrl: canonicalUrl,
-  ogImage: 'https://adrien-lloret.com/images/og-image.png',
+  ogImage: 'https://adrien-lloret.com/images/portfolio.png',
   twitterTitle: () => t('seo.expertises.ogTitle'),
   twitterDescription: () => t('seo.expertises.ogDescription'),
-  twitterImage: 'https://adrien-lloret.com/images/og-image.png'
+  twitterImage: 'https://adrien-lloret.com/images/portfolio.png'
 })
 
 useHead({

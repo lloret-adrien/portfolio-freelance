@@ -17,10 +17,10 @@ useSeoMeta({
   ogTitle: () => t('seo.parcours.ogTitle'),
   ogDescription: () => t('seo.parcours.ogDescription'),
   ogUrl: canonicalUrl,
-  ogImage: 'https://adrien-lloret.com/images/og-image.png',
+  ogImage: 'https://adrien-lloret.com/images/portfolio.png',
   twitterTitle: () => t('seo.parcours.ogTitle'),
   twitterDescription: () => t('seo.parcours.ogDescription'),
-  twitterImage: 'https://adrien-lloret.com/images/og-image.png'
+  twitterImage: 'https://adrien-lloret.com/images/portfolio.png'
 })
 
 useHead({
