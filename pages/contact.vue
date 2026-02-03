@@ -3,7 +3,10 @@ import { Mail, Linkedin, Github, Sparkles } from 'lucide-vue-next'
 
 const { t } = useI18n()
 const route = useRoute()
-const canonicalUrl = computed(() => `https://adrien-lloret.com${route.path}`)
+const canonicalUrl = computed(() => {
+  const path = route.path.endsWith('/') ? route.path : `${route.path}/`
+  return `https://adrien-lloret.com${path}`
+})
 
 useSeoMeta({
   title: () => t('seo.contact.title'),

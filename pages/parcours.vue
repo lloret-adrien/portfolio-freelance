@@ -3,7 +3,10 @@ import { Download } from 'lucide-vue-next'
 
 const { t, locale } = useI18n()
 const route = useRoute()
-const canonicalUrl = computed(() => `https://adrien-lloret.com${route.path}`)
+const canonicalUrl = computed(() => {
+  const path = route.path.endsWith('/') ? route.path : `${route.path}/`
+  return `https://adrien-lloret.com${path}`
+})
 
 const cvUrl = computed(() => {
   return locale.value === 'fr'

@@ -1,0 +1,46 @@
+[build]
+  publish = "dist"
+  command = "npm run generate"
+
+# Force trailing slash - redirections 301 pour les anciennes URLs indexées sans slash
+[[redirects]]
+  from = "/parcours"
+  to = "/parcours/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/expertises"
+  to = "/expertises/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en"
+  to = "/en/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/parcours"
+  to = "/en/parcours/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/expertises"
+  to = "/en/expertises/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/contact"
+  to = "/en/contact/"
+  status = 301
+  force = true
