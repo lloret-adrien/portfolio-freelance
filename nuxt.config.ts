@@ -13,17 +13,10 @@ export default defineNuxtConfig({
 
   site: {
     url: 'https://adrien-lloret.com',
-    trailingSlash: true,
   },
 
   sitemap: {
     autoI18n: true,
-  },
-
-  router: {
-    options: {
-      strict: true,
-    },
   },
 
   i18n: {
@@ -121,14 +114,14 @@ export default defineNuxtConfig({
     routeRules: {
       // SEO - French (default)
       '/': { prerender: true },
-      '/parcours/': { prerender: true },
-      '/expertises/': { prerender: true },
-      '/contact/': { prerender: true },
+      '/parcours': { prerender: true },
+      '/expertises': { prerender: true },
+      '/contact': { prerender: true },
       // SEO - English
-      '/en/': { prerender: true },
-      '/en/parcours/': { prerender: true },
-      '/en/expertises/': { prerender: true },
-      '/en/contact/': { prerender: true },
+      '/en': { prerender: true },
+      '/en/parcours': { prerender: true },
+      '/en/expertises': { prerender: true },
+      '/en/contact': { prerender: true },
     },
   },
 })

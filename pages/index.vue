@@ -16,10 +16,7 @@ import { EXPERTISES, PROJECTS } from '~/utils/data'
 const { t } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
-const canonicalUrl = computed(() => {
-  const path = route.path.endsWith('/') ? route.path : `${route.path}/`
-  return `https://adrien-lloret.com${path}`
-})
+const canonicalUrl = computed(() => `https://adrien-lloret.com${route.path}`)
 
 useSeoMeta({
   title: () => t('seo.home.title'),
